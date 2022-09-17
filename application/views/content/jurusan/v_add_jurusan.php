@@ -25,15 +25,15 @@
             <form id="form-tambah-jurusan" method="post" action="<?= site_url('jurusan/insert') ?>" enctype="multipart/form-data">
                 <div class="form-group">
                     <label class="form-label">Nama Jurusan</label>
-                    <input require type="text" class="form-control" name="nama">
+                    <input require type="text" class="form-control" name="nama_jurusan">
                 </div>
                 <div class="form-group">
                     <label class="form-label">Deskripsi</label>
-                    <textarea require type="" class="form-control" name="deskripsi"></textarea>
+                    <textarea require type="" class="form-control" name="deskripsi_jurusan"></textarea>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Keunggulan</label>
-                    <textarea require type="" class="form-control" name="keunggulan"></textarea>
+                    <textarea require type="" class="form-control" name="keunggulan_jurusan"></textarea>
                 </div>
             </form>
         </div>
@@ -54,28 +54,7 @@
 <script>
     $(function (){
         $("#btn-save-jurusan").on("click", function() {
-            let validate = $("#form-tambah-jurusan").valid()
-            if (validate) {
                 $("#form-tambah-jurusan").submit()
-            }
-        })
-        $("#form-tambah-testimoni").validates({
-            // rules: {
-            //     harga_barang: {
-            //         digits: true
-            //     },
-            //     jumlah_barang: {
-            //         digits: true
-            //     }
-            // },
-            errorElement: 'span',
-            errorPlacement: function(error, element) {
-                error.addClass('invalid-feedback');
-                element.closest('.form-group').append(error);
-            },
-            highlight: function(element, errorClass, validClass) {
-                $(element).addClass('is-invalid');
-            }
         })
     })
 </script>

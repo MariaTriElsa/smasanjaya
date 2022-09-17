@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Form Tambah Testimoni</title>
+    <title>Form Update Jurusan</title>
     <!-- CSS only CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -16,46 +16,47 @@
 </head>
 
 <body>
-<div class="content">  
+    <div class="content">
     <div class="card">
         <div class="card-header">
-            <h3>Form Add Testimoni</h3>
+            <h3>Form Update jurusan</h3>
         </div>
         <div class="card-body">
-            <form id="form-tambah-testimoni" method="post" action="<?= site_url('testimoni/insert') ?>" enctype="multipart/form-data">
+            <form id="form-update-jurusan" method="post" action="<?= site_url('jurusan/update') ?>" enctype="multipart/form-data">
                 <div class="form-group">
                     <label class="form-label">Nama</label>
-                    <input require type="text" class="form-control" name="nama">
+                    <input require type="text" value="<?= $jurusan->nama?>" class="form-control" name="nama">
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Peran</label>
-                    <input require type="text" class="form-control" name="peran">
+                    <label class="form-label">Deskripsi</label>
+                    <input require type="text" value="<?= $jurusan->deskripsi?>" class="form-control" name="deskripsi">
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Testimoni</label>
-                    <textarea require type="" class="form-control" name="testimoni"></textarea>
+                    <label class="form-label">Keunggulan</label>
+                    <textarea require type="text" value="<?= $jurusan->keunggulan?>" class="form-control" name="keunggulan"></textarea>
                 </div>
+                <input type="hidden" name="id_jurusan" value="<?= $jurusan->id_jurusan ?>">
             </form>
         </div>
         <div class="card-footer">
-        <button type="button" id="btn-save-testimoni" class="btn btn-success btn-sm">
+            <button type="button" id="btn-update-jurusan" class="btn btn-success btn-sm">
                 <i class="fa fa-save"></i> Simpan
             </button>
-            <a href="<?= site_url('testimoni') ?>" class="btn btn-primary btn-sm">
+            <a href="<?= site_url('jurusan') ?>" class="btn btn-primary btn-sm">
                 <i class="fa fa-reply"></i> Kembali
             </a>
         </div>
     </div>
-</div>
+    </div>
 </body>
 
 </html>
 
 <script>
     $(function (){
-        $("#btn-save-testimoni").on("click", function() {
+        $("#btn-update-jurusan").on("click", function() {
            
-                $("#form-tambah-testimoni").submit()
+                $("#form-update-jurusan").submit()
         })
     })
 </script>

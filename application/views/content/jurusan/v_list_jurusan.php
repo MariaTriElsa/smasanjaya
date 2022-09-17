@@ -95,7 +95,6 @@
     </div>
 </div>
     <form id="form-delete" method="post" action="<?= site_url('jurusan/delete') ?>">
-
     </form>
 </body>
 

@@ -22,7 +22,7 @@
             <h3>Form Update Testimoni</h3>
         </div>
         <div class="card-body">
-            <form id="form-update-barang" method="post" action="<?= site_url('testimoni/update') ?>" enctype="multipart/form-data">
+            <form id="form-update-testimoni" method="post" action="<?= site_url('testimoni/update') ?>" enctype="multipart/form-data">
                 <div class="form-group">
                     <label class="form-label">Nama</label>
                     <input require type="text" value="<?= $testimoni->nama?>" class="form-control" name="nama">
@@ -55,28 +55,8 @@
 <script>
     $(function (){
         $("#btn-update-testimoni").on("click", function() {
-            let validate = $("#form-update-testimoni").valid()
-            if (validate) {
+           
                 $("#form-update-testimoni").submit()
-            }
-        })
-        $("#form-update-testimoni").validates({
-            rules: {
-                peran: {
-                    digits: true
-                },
-                testimoni: {
-                    digits: true
-                }
-            },
-            errorElement: 'span',
-            errorPlacement: function(error, element) {
-                error.addClass('invalid-feedback');
-                element.closest('.form-group').append(error);
-            },
-            highlight: function(element, errorClass, validClass) {
-                $(element).addClass('is-invalid');
-            }
         })
     })
 </script>

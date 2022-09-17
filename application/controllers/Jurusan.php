@@ -33,7 +33,7 @@ class Jurusan extends CI_Controller
             "deskripsi_jurusan" => $this->input->post("deskripsi_jurusan"), 
             "keunggulan_jurusan" => $this->input->post("keunggulan_jurusan") 
         ); 
-        $id = $this->ModelTestimoni->insertGetId($data); 
+        $id = $this->ModelJurusan->insertGetId($data); 
         redirect('jurusan'); 
     } 
 
