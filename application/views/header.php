@@ -52,9 +52,9 @@
             </a>
           </li>
           <li>
-            <a href="./map.html">
+          <a href="<?=base_url()?>jurusan">
               <i class="nc-icon nc-pin-3"></i>
-              <p>Maps</p>
+              <p>Jurusan</p>
             </a>
           </li>
           <li>
