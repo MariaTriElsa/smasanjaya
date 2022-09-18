@@ -62,7 +62,7 @@
                             <td><?= $no++ ?></td>
                             <td><?= $o->nama?></td>
                             <td><?= $o->deskripsi ?></td>
-                            <td><img src="<?php echo base_url();?>upload/<?php echo $o->gambar?>" width="90" height="110"></td>
+                            <td><img src="<?php echo base_url();?>upload/<?php echo $o->gambar?>" width="120" height="120"></td>
                             <td>
                                 <a href="<?= site_url("organisasi/ubah/$o->id_organisasi") ?>" class="btn btn-warning btn-sm">
                                     <i class="fa fa-pencil"></i>
@@ -95,7 +95,6 @@
     </div>
 </div>
     <form id="form-delete" method="post" action="<?= site_url('organisasi/delete') ?>">
-
     </form>
 </body>
 
@@ -104,7 +103,7 @@
     $(function() {
         let idOrganisasi = 0
         $(".btn-delete-organisasi").on("click", function() {
-            idOrganisasi= $(this).data("id");
+            idOrganisasi = $(this).data("id");
             console.log(idOrganisasi);
             $("#modal-confirm-delete").modal('show');
         });
@@ -113,7 +112,7 @@
             let inputId = $("<input>")
                 .attr("type", "hidden")
                 .attr("name", "id_organisasi")
-                .val(idTestimoni);
+                .val(idOrganisasi);
             let formDelete = $("#form-delete");
             formDelete.empty().append(inputId);
             formDelete.submit();
