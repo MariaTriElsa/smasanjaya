@@ -60,11 +60,11 @@
                     ?>
                         <tr>
                             <td><?= $no++ ?></td>
-                            <td><?= $o->nama_organisasi ?></td>
-                            <td><?= $o->deskripsi_organisasi ?></td>
-                            <td><?= $o->gambar ?></td>
+                            <td><?= $o->nama?></td>
+                            <td><?= $o->deskripsi ?></td>
+                            <td><img src="<?php echo base_url();?>upload/<?php echo $o->gambar?>" width="90" height="110"></td>
                             <td>
-                                <a href="<?= site_url("organisasi/ubah/$t->id_testimoni") ?>" class="btn btn-warning btn-sm">
+                                <a href="<?= site_url("organisasi/ubah/$o->id_organisasi") ?>" class="btn btn-warning btn-sm">
                                     <i class="fa fa-pencil"></i>
                                 </a>
                                 <a href="#" data-id="<?= $o->id_organisasi ?>" class="btn btn-danger btn-sm btn-delete-organisasi">
@@ -88,7 +88,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-info" data-dismiss="modal">Tidak</button>
-                    <button type="button" class="btn btn-danger" id="btn-delete">Hapus</button>
+                    <button type="button" class="btn btn-danger" id="btn-delete-organisasi">Hapus</button>
                 </div>
             </div>
         </div>

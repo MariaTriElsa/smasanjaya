@@ -28,37 +28,41 @@ class Organisasi extends CI_Controller
     
     public function insert() 
     { 
-
-        $data = array( 
-            "nama_organisasi" => $this->input->post("nama_organisasi"), 
-            "deskripsi_organisasi" => $this->input->post("deskripsi_organisasi"), 
-            "gambar" => $this->input->post("gambar") 
-        ); 
-        $id = $this->ModelOrganisasi->insertGetId($data);
-        if($id>0){
-            $uploadGambar = $this->uploadGambar("gambar");
-            if($uploadGambar["result"]=="success"){
-                $dataUpdate=array(
-                    "gambar"=>$uploadGambar["file"]["file_name"],
-                );
+        $nama = $this->input->post('nama');
+        $deskripsi = $this->input->post('deskripsi');
+        $gambar =  $_FILES['gambar'];
+        if($gambar=''){}else{
+            $config['upload_path']          = './upload/';
+            $config['allowed_types']        = 'gif|jpg|png|jpeg';
+            $this ->load->library('upload',$config);
+            if(!$this->upload->do_upload('gambar')){
+                echo "Upload Gagal"; die();
+            }else{
+                $gambar=$this->upload->data('file_name');
             }
-        } 
+        }
+        $data = array( 
+            'nama'=>$nama,
+            'deskripsi'=>$deskripsi,
+            'gambar' =>$gambar
+        ); 
+        $this->ModelOrganisasi->insertGetId($data); 
         redirect('organisasi'); 
     } 
-    public function uploadGambar($field){
-        $config['upload_path']          = './upload/organisasi/';
-        $config['allowed_types']        = 'gif|jpg|png|jpeg';
-        $config['max_size']             = 2048;
-        $config['file_name']             = 'item-'.date('ymd').'-'.substr(md5(rand()),0,10);
-        $this->load->library('upload', $config);
-        if($this->upload->do_upload($field)){
-            $result =array("result"=>"success","file"=>$this->upload->data(),"error"=>"");
-            return $result;
-        }else{
-            $result =array("result"=>"failed","file"=>"","error"=>$this->upload->display_errors());
-            return $result;
-        }
-    }
+    // public function uploadGambar($field){
+    //     $config['upload_path']          = './upload/organisasi/';
+    //     $config['allowed_types']        = 'gif|jpg|png|jpeg';
+    //     $config['max_size']             = 2048;
+    //     $config['file_name']             = 'item-'.date('ymd').'-'.substr(md5(rand()),0,10);
+    //     $this->load->library('upload', $config);
+    //     if($this->upload->do_upload($field)){
+    //         $result =array("result"=>"success","file"=>$this->upload->data(),"error"=>"");
+    //         return $result;
+    //     }else{
+    //         $result =array("result"=>"failed","file"=>"","error"=>$this->upload->display_errors());
+    //         return $result;
+    //     }
+    // }
 
     public function ubah($id) 
     { 

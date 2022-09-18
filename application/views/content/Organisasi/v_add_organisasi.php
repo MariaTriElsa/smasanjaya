@@ -25,11 +25,11 @@
             <form id="form-tambah-organisasi" method="post" action="<?= site_url('organisasi/insert') ?>" enctype="multipart/form-data">
                 <div class="form-group">
                     <label class="form-label">Nama</label>
-                    <input require type="text" class="form-control" name="nama_organisasi">
+                    <input require type="text" class="form-control" name="nama">
                 </div>
                 <div class="form-group">
                     <label class="form-label">Deskripsi</label>
-                    <textarea require type="" class="form-control" name="deskripsi_organisasi"></textarea>
+                    <textarea require type="" class="form-control" name="deskripsi"></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Gambar</label>
