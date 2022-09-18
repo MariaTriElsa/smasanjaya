@@ -31,7 +31,7 @@
           <!-- <p>CT</p> -->
         </a>
         <a href="https://www.creative-tim.com" class="simple-text logo-normal">
-          Creative Tim
+          SMA SANJAYA 
           <!-- <div class="logo-image-big">
             <img src="../assets/img/logo-big.png">
           </div> -->
@@ -41,52 +41,83 @@
         <ul class="nav">
           <li class="active ">
             <a href="./dashboard.html">
-              <i class="nc-icon nc-bank"></i>
+              <!-- <i class="nc-icon nc-bank"></i> -->
               <p>Dashboard</p>
             </a>
           </li>
           <li>
-            <a href="<?=base_url()?>testimoni">
-            <i class="nc-icon nc-single-02"></i>
-              <p>Testimoni</p>
+            <a href="<?=base_url()?>">
+            <!-- <i class="nc-icon nc-single-02"></i> -->
+              <p>About Us</p>
+            </a>
+          </li>
+          <li>
+            <a href="<?=base_url()?>">
+            <!-- <i class="nc-icon nc-single-02"></i> -->
+              <p>Staff</p>
             </a>
           </li>
           <li>
           <a href="<?=base_url()?>jurusan">
-              <i class="nc-icon nc-pin-3"></i>
+              <!-- <i class="nc-icon nc-pin-3"></i> -->
               <p>Jurusan</p>
             </a>
           </li>
           <li>
-            <a href="./notifications.html">
-              <i class="nc-icon nc-bell-55"></i>
-              <p>Notifications</p>
+            <a href="<?=base_url()?>">
+            <!-- <i class="nc-icon nc-single-02"></i> -->
+              <p>Fasilitas</p>
             </a>
           </li>
           <li>
-            <a href="./user.html">
-              <i class="nc-icon nc-single-02"></i>
-              <p>User Profile</p>
+            <a href="<?=base_url()?>testimoni">
+            <!-- <i class="nc-icon nc-single-02"></i> -->
+              <p>testimoni</p>
             </a>
           </li>
           <li>
-            <a href="./tables.html">
-              <i class="nc-icon nc-tile-56"></i>
-              <p>Table List</p>
+          <a href="<?=base_url()?>">
+              <!-- <i class="nc-icon nc-pin-3"></i> -->
+              <p>Ekstrakulikuler</p>
             </a>
           </li>
           <li>
-            <a href="./typography.html">
-              <i class="nc-icon nc-caps-small"></i>
-              <p>Typography</p>
+          <a href="<?=base_url()?>">
+              <!-- <i class="nc-icon nc-pin-3"></i> -->
+              <p>Organisasi</p>
             </a>
           </li>
-          <li class="active-pro">
-            <a href="./upgrade.html">
-              <i class="nc-icon nc-spaceship"></i>
-              <p>Upgrade to PRO</p>
+          <li>
+          <a href="<?=base_url()?>">
+              <!-- <i class="nc-icon nc-pin-3"></i> -->
+              <p>Berita</p>
             </a>
           </li>
+          <li>
+          <a href="<?=base_url()?>">
+              <!-- <i class="nc-icon nc-pin-3"></i> -->
+              <p>Pengumuman</p>
+            </a>
+          </li>
+          <li>
+          <a href="<?=base_url()?>">
+              <!-- <i class="nc-icon nc-pin-3"></i> -->
+              <p>Info PSB</p>
+            </a>
+          </li>
+          <li>
+          <a href="<?=base_url()?>">
+              <!-- <i class="nc-icon nc-pin-3"></i> -->
+              <p>Prestasi</p>
+            </a>
+          </li>
+          <li>
+            <a href="<?=base_url()?>">
+            <!-- <i class="nc-icon nc-single-02"></i> -->
+              <p>Unduh Berkas</p>
+            </a>
+          </li>
+
         </ul>
       </div>
     </div>
@@ -102,7 +133,7 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="javascript:;">Paper Dashboard 2</a>
+            <a class="navbar-brand" href="javascript:;"></a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
