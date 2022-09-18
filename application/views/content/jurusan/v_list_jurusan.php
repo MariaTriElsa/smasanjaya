@@ -67,7 +67,7 @@
                                 <a href="<?= site_url("jurusan/ubah/$j->id_jurusan") ?>" class="btn btn-warning btn-sm">
                                     <i class="fa fa-pencil"></i>
                                 </a>
-                                <a href="#" data-id="<?= $j->id_jurusan ?>" class="btn btn-danger btn-sm btn-delete-testimoni">
+                                <a href="#" data-id="<?= $j->id_jurusan ?>" class="btn btn-danger btn-sm btn-delete-jurusan">
                                     <i class="fa fa-trash"></i>
                                 </a>
                             </td>

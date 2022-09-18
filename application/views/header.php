@@ -52,11 +52,7 @@
             </a>
           </li>
           <li>
-          <a href="<?=base_url()?>jurusan">
-              <i class="nc-icon nc-pin-3"></i>
-              <p>Jurusan</p>
-            </a>
-          </li>
+          
           <li>
             <a href="./notifications.html">
               <i class="nc-icon nc-bell-55"></i>

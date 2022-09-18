@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Form Ubah Jurusan</title>
+    <title>Form Tambah Organisasi</title>
     <!-- CSS only CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -16,47 +16,45 @@
 </head>
 
 <body>
-    <div class="content">
+<div class="content">  
     <div class="card">
         <div class="card-header">
-            <h3>Form Update Jurusan</h3>
+            <h3>Form Tambah Organisasi</h3>
         </div>
         <div class="card-body">
-            <form id="form-update-jurusan" method="post" action="<?= site_url('jurusan/update') ?>" enctype="multipart/form-data">
+            <form id="form-tambah-organisasi" method="post" action="<?= site_url('organisasi/insert') ?>" enctype="multipart/form-data">
                 <div class="form-group">
                     <label class="form-label">Nama</label>
-                    <input require type="text" value="<?= $jurusan->nama_jurusan?>" class="form-control" name="nama_jurusan">
+                    <input require type="text" class="form-control" name="nama_organisasi">
                 </div>
                 <div class="form-group">
                     <label class="form-label">Deskripsi</label>
-                    <input require type="text" value="<?= $jurusan->deskripsi_jurusan?>" class="form-control" name="deskripsi_jurusan">
+                    <textarea require type="" class="form-control" name="deskripsi_organisasi"></textarea>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Keunggulan</label>
-                    <textarea require type="text" value="<?= $jurusan->keunggulan_jurusan?>" class="form-control" name="keunggulan_jurusan"></textarea>
+                    <label class="form-label">Gambar</label>
+                    <input type="file" class="form-control" name="gambar">
                 </div>
-                <input type="hidden" name="id_jurusan" value="<?= $jurusan->id_jurusan ?>">
             </form>
         </div>
         <div class="card-footer">
-            <button type="button" id="btn-update-jurusan" class="btn btn-success btn-sm">
+            <button type="button" id="btn-save-organisasi" class="btn btn-success btn-sm">
                 <i class="fa fa-save"></i> Simpan
             </button>
-            <a href="<?= site_url('jurusan') ?>" class="btn btn-primary btn-sm">
+            <a href="<?= site_url('organisasi') ?>" class="btn btn-primary btn-sm">
                 <i class="fa fa-reply"></i> Kembali
             </a>
         </div>
     </div>
-    </div>
+</div>
 </body>
 
 </html>
 
 <script>
     $(function (){
-        $("#btn-update-jurusan").on("click", function() {
-           
-                $("#form-update-jurusan").submit()
+        $("#btn-save-organisasi").on("click", function() {
+                $("#form-tambah-organisasi").submit()
         })
     })
 </script>
