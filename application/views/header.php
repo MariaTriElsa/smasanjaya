@@ -40,7 +40,7 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="active ">
-            <a href="./dashboard.html">
+          <a href="<?=base_url()?>dashboard">
               <!-- <i class="nc-icon nc-bank"></i> -->
               <p>Dashboard</p>
             </a>
@@ -52,7 +52,7 @@
             </a>
           </li>
           <li>
-            <a href="<?=base_url()?>">
+            <a href="<?=base_url()?>staff">
             <!-- <i class="nc-icon nc-single-02"></i> -->
               <p>Staff</p>
             </a>
@@ -72,7 +72,7 @@
           <li>
             <a href="<?=base_url()?>testimoni">
             <!-- <i class="nc-icon nc-single-02"></i> -->
-              <p>testimoni</p>
+              <p>Testimoni</p>
             </a>
           </li>
           <li>
@@ -82,7 +82,7 @@
             </a>
           </li>
           <li>
-          <a href="<?=base_url()?>">
+          <a href="<?=base_url()?>organisasi">
               <!-- <i class="nc-icon nc-pin-3"></i> -->
               <p>Organisasi</p>
             </a>

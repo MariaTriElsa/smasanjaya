@@ -7,19 +7,27 @@ class Staff extends CI_Controller {
 	}
 
 	public function index() {
-		$listStaff = $this->staffModel->getAll();
+		$listStaff = $this->ModelStaff->getAll();
 		$data = array(
 			"staff" => $listStaff
 		);
-		$this->load->view("view_staff", $data);
+        $this->load->view('header');
+		$this->load->view("content/staff/v_list_staff", $data);
+        $this->load->view('footer');
 	}
-
+    public function tambah(){
+        $this->load->view('header');
+        $this->load->view("content/staff/v_add_staff");
+        $this->load->view('footer');
+    }
 	public function update($id) {
-		$staff = $this->staffModel->getByPrimaryKey($id);
+		$staff = $this->ModelStaff->getByPrimaryKey($id);
 		$data = array(
 			"staff" => $staff
 		);
-		$this->load->view("view_update_staff", $data);
+        $this->load->view('header');
+		$this->load->view("content/staff/v_update_staff", $data);
+        $this->load->view('footer');
 	}
 
 	public function proses_update() {
@@ -31,7 +39,7 @@ class Staff extends CI_Controller {
 			"foto_staff" => $this->input->post("foto_staff"),
 			"deskripsi" => $this->input->post("deskripsi"),
 		);
-		$id = $this->staffModel->update($id, $staff);
+		$id = $this->sModelStaff->update($id);
 		if ($id > 0) {
 			$uploadGambar = $this->uploadGambar("foto_staff");
 
@@ -39,7 +47,7 @@ class Staff extends CI_Controller {
 				$dataUpdate = array(
 					"foto_staff" => $uploadGambar["file"]["file_name"],
 				);
-				$this->staffModel->update($id,$dataUpdate);
+				$this->ModelStaff->update($id,$dataUpdate);
 			}
 		}
 		redirect("staff");
