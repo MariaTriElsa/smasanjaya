@@ -85,7 +85,7 @@ class Ekstrakurikuler extends CI_Controller
     
         echo var_dump($data); 
         echo var_dump($id); 
-        $this->ModelEkstrakulikuler->update($id, $data); 
+        $this->ModelEkstrakurikuler->update($id, $data); 
         redirect('ekstrakurikuler'); 
     } 
  
