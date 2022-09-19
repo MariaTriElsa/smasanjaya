@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List Staff</title>
+    <title>List Testimoni</title>
     <!-- CSS only CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -61,7 +61,7 @@
                     ?>
                         <tr>
                             <td><?= $no++ ?></td>
-                            <td><?= $s->nama_staff?></td>
+                            <td><?= $s->nama_staff ?></td>
                             <td><?= $s->jabatan?></td>
                             <td><img src="<?php echo base_url();?>upload/<?php echo $s->foto?>" width="120" height="120"></td>
                             <td><?= $s->deskripsi?></td>
@@ -97,13 +97,14 @@
     </div>
 </div>
     <form id="form-delete" method="post" action="<?= site_url('staff/delete') ?>">
+
     </form>
 </body>
 
 </html>
 <script>
     $(function() {
-        let idStaff= 0
+        let idStaff = 0
         $(".btn-delete-staff").on("click", function() {
             idStaff = $(this).data("id");
             console.log(idStaff);

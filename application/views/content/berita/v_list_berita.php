@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List Berita</title>
+    <title>List Testimoni</title>
     <!-- CSS only CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -61,15 +61,15 @@
                     ?>
                         <tr>
                             <td><?= $no++ ?></td>
-                            <td><?= $b->nama_berita?></td>
-                            <td><?= $b->deskripsi_berita ?></td>
+                            <td><?= $b->nama_berita ?></td>
+                            <td><?= $b->deskripsi_berita?></td>
                             <td><img src="<?php echo base_url();?>upload/<?php echo $b->gambar_berita?>" width="120" height="120"></td>
-                            <td><?= $b->tanggal ?></td>
+                            <td><?= $b->tanggal?></td>
                             <td>
                                 <a href="<?= site_url("berita/ubah/$b->id_berita") ?>" class="btn btn-warning btn-sm">
                                     <i class="fa fa-pencil"></i>
                                 </a>
-                                <a href="#" data-id="<?= $b->id_berita?>" class="btn btn-danger btn-sm btn-delete-berita">
+                                <a href="#" data-id="<?= $b->id_berita ?>" class="btn btn-danger btn-sm btn-delete-berita">
                                     <i class="fa fa-trash"></i>
                                 </a>
                             </td>
@@ -95,6 +95,7 @@
             </div>
         </div>
     </div>
+</div>
     <form id="form-delete" method="post" action="<?= site_url('berita/delete') ?>">
 
     </form>

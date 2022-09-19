@@ -69,14 +69,14 @@ class Staff extends CI_Controller
         $nama = $this->input->post('nama_staff');
         $jabatan = $this->input->post('jabatan');
         $foto =  $_FILES['foto'];
-        if($gambar=''){}else{
+        if($foto=''){}else{
             $config['upload_path']          = './upload/';
             $config['allowed_types']        = 'gif|jpg|png|jpeg';
             $this ->load->library('upload',$config);
             if(!$this->upload->do_upload('foto')){
                 echo "Upload Gagal"; die();
             }else{
-                $gambar=$this->upload->data('file_name');
+                $foto=$this->upload->data('file_name');
             }
         }
         $deskripsi = $this->input->post('deskripsi');
