@@ -29,7 +29,7 @@ class Berkas extends CI_Controller
 	public function insert()
 	{
 		$nama = $this->input->post('nama_berkas');
-		$deskripsi = $this->input->post('kategori');
+		$kategori = $this->input->post('kategori');
 		$berkas =  $_FILES['file_berkas'];
 		if($berkas=''){}else{
 			$config['upload_path']          = './upload/';
@@ -43,7 +43,7 @@ class Berkas extends CI_Controller
 		}
 		$data = array(
 			'nama_berkas'=>$nama,
-			'kategori'=>$deskripsi,
+			'kategori'=>$kategori,
 			'file_berkas' =>$berkas
 		);
 		$this->ModelBerkas->insertGetId($data);
@@ -65,7 +65,7 @@ class Berkas extends CI_Controller
 	{
 		$id = $this->input->post('id_berkas');
 		$nama = $this->input->post('nama_berkas');
-		$deskripsi = $this->input->post('kategori');
+		$kategori = $this->input->post('kategori');
 		$berkas =  $_FILES['file_berkas'];
 		if($berkas=''){}else{
 			$config['upload_path']          = './upload/';
@@ -79,7 +79,7 @@ class Berkas extends CI_Controller
 		}
 		$data = array(
 			'nama_berkas'=>$nama,
-			'kategori'=>$deskripsi,
+			'kategori'=>$kategori,
 			'file_berkas' =>$berkas
 		);
 

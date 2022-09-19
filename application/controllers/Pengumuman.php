@@ -27,72 +27,74 @@ class Pengumuman extends CI_Controller
     }
     
     public function insert() 
-    { 
-        $nama = $this->input->post('nama');
-        $deskripsi = $this->input->post('deskripsi');
-        $gambar =  $_FILES['gambar'];
-        if($gambar=''){}else{
-            $config['upload_path']          = './upload/';
-            $config['allowed_types']        = 'gif|jpg|png|jpeg';
-            $this ->load->library('upload',$config);
-            if(!$this->upload->do_upload('gambar')){
-                echo "Upload Gagal"; die();
-            }else{
-                $gambar=$this->upload->data('file_name');
-            }
-        }
-        $data = array( 
-            'nama'=>$nama,
-            'deskripsi'=>$deskripsi,
-            'gambar' =>$gambar
-        ); 
-        $this->ModelOrganisasi->insertGetId($data); 
-        redirect('organisasi'); 
+    {
+		$nama = $this->input->post('nama');
+		$deskripsi = $this->input->post('deskripsi');
+		$tanggal = $this->input->post('tanggal');
+		$berkas =  $_FILES['file'];
+		if($berkas=''){}else{
+			$config['upload_path']          = './upload/';
+			$config['allowed_types']        = 'gif|jpg|png|jpeg|doc|docx|pdf';
+			$this ->load->library('upload',$config);
+			if(!$this->upload->do_upload('file')){
+				echo "Upload Gagal"; die();
+			}else{
+				$berkas=$this->upload->data('file_name');
+			}
+		}
+		$data = array(
+			'nama'=>$nama,
+			'deskripsi'=>$deskripsi,
+			'tanggal'=>$tanggal,
+			'file' =>$berkas
+		);
+		$this->ModelPengumuman->insertGetId($data);
+		redirect('pengumuman');
     } 
 
     public function ubah($id) 
     { 
-        $organisasi = $this->ModelOrganisasi->getByPrimaryKey($id); 
+        $pengumuman = $this->ModelPengumuman->getByPrimaryKey($id); 
         $data = array( 
-            "organisasi" => $organisasi, 
+            "pengumuman" => $pengumuman, 
         ); 
         $this->load->view('header');
-        $this->load->view('content/organisasi/v_update_organisasi',$data); 
+        $this->load->view('content/pengumuman/v_update_pengumuman',$data); 
         $this->load->view('footer');
     } 
  
     public function update() 
     { 
-        $id = $this->input->post('id_organisasi'); 
+        $id = $this->input->post('id_pengumuman'); 
         $nama = $this->input->post('nama');
         $deskripsi = $this->input->post('deskripsi');
-        $gambar =  $_FILES['gambar'];
-        if($gambar=''){}else{
+		$tanggal = $this->input->post('tanggal');
+        $berkas =  $_FILES['file'];
+        if($berkas=''){}else{
             $config['upload_path']          = './upload/';
-            $config['allowed_types']        = 'gif|jpg|png|jpeg';
+            $config['allowed_types']        = 'gif|jpg|png|jpeg|doc|docx|pdf';
             $this ->load->library('upload',$config);
-            if(!$this->upload->do_upload('gambar')){
+            if(!$this->upload->do_upload('file')){
                 echo "Upload Gagal"; die();
             }else{
-                $gambar=$this->upload->data('file_name');
+                $filer=$this->upload->data('file_name');
             }
         }
-        $data = array( 
-            'nama'=>$nama,
-            'deskripsi'=>$deskripsi,
-            'gambar' =>$gambar
+        $data = array(
+			'nama'=>$nama,
+			'deskripsi'=>$deskripsi,
+			'tanggal'=>$tanggal,
+			'file' =>$berkas
         ); 
-    
-        echo var_dump($data); 
-        echo var_dump($id); 
-        $this->ModelOrganisasi->update($id, $data); 
-        redirect('organisasi'); 
+
+        $this->ModelPengumuman->update($id, $data); 
+        redirect('pengumuman'); 
     } 
  
     public function delete() 
     { 
-        $id = $this->input->post('id_organisasi'); 
-        $this->ModelOrganisasi->delete($id); 
-        redirect('organisasi'); 
+        $id = $this->input->post('id_pengumuman'); 
+        $this->ModelPengumuman->delete($id); 
+        redirect('pengumuman'); 
     } 
 }
