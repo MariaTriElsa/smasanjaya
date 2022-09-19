@@ -112,7 +112,7 @@
             </a>
           </li>
           <li>
-            <a href="<?=base_url()?>unduh berkas">
+            <a href="<?=base_url()?>berkas">
             <!-- <i class="nc-icon nc-single-02"></i> -->
               <p>Unduh Berkas</p>
             </a>

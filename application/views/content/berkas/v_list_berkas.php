@@ -35,11 +35,11 @@
 <div class="content">
     <div class="card">
         <div class="card-header">
-            <h3>Data Fasilitas</h3>
+            <h3>Data Berkas</h3>
         </div>
         <div class="card-footer">
-            <a href="<?= site_url('fasilitas/tambah') ?>" class="btn btn-primary btn-sm">
-                <i class="fa fa-plus"></i>Tambah Fasilitas
+            <a href="<?= site_url('berkas/tambah') ?>" class="btn btn-primary btn-sm">
+                <i class="fa fa-plus"></i>Tambah Berkas
             </a>
         </div>
         <div class="card-body">
@@ -48,26 +48,30 @@
                     <tr>
                         <th>Nomor</th>
                         <th>Nama</th>
-                        <th>Deskripsi</th>
-                        <th>Gambar</th>
+                        <th>Kategori</th>
+                        <th>Berkas</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
                     $no = 1;
-                    foreach ($fasilitas as $f) {
+                    foreach ($berkas as $b) {
                     ?>
                         <tr>
                             <td><?= $no++ ?></td>
-                            <td><?= $f->nama_fasilitas?></td>
-                            <td><?= $f->deskripsi_fasilitas ?></td>
-                            <td><img src="<?php echo base_url();?>upload/<?php echo $f->gambar_fasilitas?>" width="120" height="120"></td>
-                            <td>
-                                <a href="<?= site_url("fasilitas/ubah/$f->id_fasilitas") ?>" class="btn btn-warning btn-sm">
+                            <td><?= $b->nama_berkas?></td>
+                            <td><?= $b->kategori ?></td>
+							<td><?= $b->file_berkas ?></td>
+							<td>
+								<a class="btn btn-sm btn-primary text-white"
+								   href="<?= base_url('upload/' . $b->file_berkas) ?>" download="<?= $b->nama_berkas ?>">
+									<i class="fa fa-download"></i>
+								</a>
+                                <a href="<?= site_url("berkas/ubah/$b->id_berkas") ?>" class="btn btn-warning btn-sm">
                                     <i class="fa fa-pencil"></i>
                                 </a>
-                                <a href="#" data-id="<?= $f->id_fasilitas?>" class="btn btn-danger btn-sm btn-delete-fasilitas">
+                                <a href="#" data-id="<?= $b->id_berkas?>" class="btn btn-danger btn-sm btn-delete-berkas">
                                     <i class="fa fa-trash"></i>
                                 </a>
                             </td>
@@ -93,7 +97,7 @@
             </div>
         </div>
     </div>
-    <form id="form-delete" method="post" action="<?= site_url('fasilitas/delete') ?>">
+    <form id="form-delete" method="post" action="<?= site_url('berkas/delete') ?>">
 
     </form>
 </body>
@@ -102,7 +106,7 @@
 <script>
     $(function() {
         let idFasilitas = 0
-        $(".btn-delete-fasilitas").on("click", function() {
+        $(".btn-delete-berkas").on("click", function() {
             idFasilitas = $(this).data("id");
             console.log(idFasilitas);
             $("#modal-confirm-delete").modal('show');
@@ -111,7 +115,7 @@
             //panggil url untuk hapus data
             let inputId = $("<input>")
                 .attr("type", "hidden")
-                .attr("name", "id_fasilitas")
+                .attr("name", "id_berkas")
                 .val(idFasilitas);
             let formDelete = $("#form-delete");
             formDelete.empty().append(inputId);

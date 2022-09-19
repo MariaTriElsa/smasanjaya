@@ -19,30 +19,30 @@
 <div class="content">  
     <div class="card">
         <div class="card-header">
-            <h3>Form Tambah Fasilitas</h3>
+            <h3>Form Tambah Berkas</h3>
         </div>
         <div class="card-body">
-            <form id="form-tambah-fasilitas" method="post" action="<?= site_url('fasilitas/insert') ?>" enctype="multipart/form-data">
+            <form id="form-tambah-berkas" method="post" action="<?= site_url('berkas/insert') ?>" enctype="multipart/form-data">
                 <div class="form-group">
                     <label class="form-label">Nama</label>
-                    <input require type="text" class="form-control" name="nama_fasilitas" placeholder="Nama">
+                    <input require type="text" class="form-control" name="nama_berkas" placeholder="Nama">
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Deskripsi</label>
-                    <textarea require type="" class="form-control" name="deskripsi_fasilitas" placeholder="Deskripsi"></textarea>
+                    <label class="form-label">Kategori</label>
+                    <input require type="text" class="form-control" name="kategori" placeholder="Kategori">
                 </div>
                 <div class="mb-3">
-                    <label for="formFile" class="form-label">Gambar</label>
-                    <input class="form-control" type="file" id="formFile" name="gambar_fasilitas" placeholder="Gambar">
+                    <label for="formFile" class="form-label">File</label>
+                    <input class="form-control" type="file" id="formFile" name="file_berkas" placeholder="File">
                 </div>
                 </div>
             </form>
         </div>
         <div class="card-footer">
-            <button type="button" id="btn-save-fasilitas" class="btn btn-success btn-sm">
+            <button type="button" id="btn-save-berkas" class="btn btn-success btn-sm">
                 <i class="fa fa-save"></i> Simpan
             </button>
-            <a href="<?= site_url('fasilitas') ?>" class="btn btn-primary btn-sm">
+            <a href="<?= site_url('berkas') ?>" class="btn btn-primary btn-sm">
                 <i class="fa fa-reply"></i> Kembali
             </a>
         </div>
@@ -54,8 +54,8 @@
 
 <script>
     $(function (){
-        $("#btn-save-fasilitas").on("click", function() {
-                $("#form-tambah-fasilitas").submit()
+        $("#btn-save-berkas").on("click", function() {
+                $("#form-tambah-berkas").submit()
         })
     })
 </script>

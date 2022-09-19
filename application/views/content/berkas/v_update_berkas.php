@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Form Ubah Fasilitas</title>
+    <title>Form Ubah Berkas</title>
     <!-- CSS only CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -19,30 +19,30 @@
     <div class="content">
     <div class="card">
         <div class="card-header">
-            <h3>Form Ubah Fasilitas</h3>
+            <h3>Form Ubah Berkas</h3>
         </div>
         <div class="card-body">
-            <form id="form-update-fasilitas" method="post" action="<?= site_url('fasilitas/update') ?>" enctype="multipart/form-data">
+            <form id="form-update-berkas" method="post" action="<?= site_url('berkas/update') ?>" enctype="multipart/form-data">
                 <div class="form-group">
                     <label class="form-label">Nama</label>
-                    <input require type="text" value="<?= $fasilitas->nama_fasilitas?>" class="form-control" name="nama_fasilitas" placeholder="Nama">
+                    <input require type="text" value="<?= $berkas->nama_berkas?>" class="form-control" name="nama_berkas" placeholder="Nama">
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Deskripsi</label>
-                    <input require type="text" value="<?= $fasilitas->deskripsi_fasilitas?>" class="form-control" name="deskripsi_fasilitas" placeholder="Deskripsi">
+                    <label class="form-label">Kategori</label>
+                    <input require type="text" value="<?= $berkas->kategori?>" class="form-control" name="kategori" placeholder="Kategori">
                 </div>
                 <div class="mb-3">
-                    <label for="formFile" class="form-label">Gambar</label>
-                    <input class="form-control" value="<?= $fasilitas->gambar_fasilitas?>" type="file" id="formFile" name="gambar_fasilitas">
+                    <label for="formFile" class="form-label">File</label>
+                    <input class="form-control" value="<?= $berkas->file_berkas?>" type="file" id="formFile" name="file_berkas">
                 </div>
-                <input type="hidden" name="id_fasilitas" value="<?= $fasilitas->id_fasilitas ?>">
+                <input type="hidden" name="id_berkas" value="<?= $berkas->id_berkas ?>">
             </form>
         </div>
         <div class="card-footer">
-            <button type="button" id="btn-update-fasilitas" class="btn btn-success btn-sm">
+            <button type="button" id="btn-update-berkas" class="btn btn-success btn-sm">
                 <i class="fa fa-save"></i> Simpan
             </button>
-            <a href="<?= site_url('fasilitas') ?>" class="btn btn-primary btn-sm">
+            <a href="<?= site_url('berkas') ?>" class="btn btn-primary btn-sm">
                 <i class="fa fa-reply"></i> Kembali
             </a>
         </div>
@@ -54,9 +54,9 @@
 
 <script>
     $(function (){
-        $("#btn-update-fasilitas").on("click", function() {
+        $("#btn-update-berkas").on("click", function() {
            
-                $("#form-update-fasilitas").submit()
+                $("#form-update-berkas").submit()
         })
     })
 </script>
