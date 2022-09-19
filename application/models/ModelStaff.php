@@ -28,9 +28,9 @@ class ModelStaff extends CI_Model {
 		return $this->db->update($this->table, $data);
 	}
 
-	public function delete($id) {
-		$this->db->where($this->primaryKey,$id);  
-        return $this->db->delete($this->table,$id);
-	}
+	public function delete($id)
+    {
+        return $this->db->where($this->primaryKey, $id)->delete($this->table);
+    }
 
 }
