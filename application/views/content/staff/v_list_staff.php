@@ -103,7 +103,7 @@
 </html>
 <script>
     $(function() {
-        let idStaff = 0
+        let idStaff= 0
         $(".btn-delete-staff").on("click", function() {
             idStaff = $(this).data("id");
             console.log(idStaff);

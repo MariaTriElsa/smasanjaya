@@ -63,7 +63,7 @@ class Fasilitas extends CI_Controller
  
     public function update() 
     { 
-        $id = $this->input->post('id_organisasi'); 
+        $id = $this->input->post('id_fasilitas'); 
         $nama = $this->input->post('nama_fasilitas');
         $deskripsi = $this->input->post('deskripsi_fasilitas');
         $gambar =  $_FILES['gambar_fasilitas'];
