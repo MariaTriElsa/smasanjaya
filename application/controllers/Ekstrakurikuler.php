@@ -1,28 +1,28 @@
 <?php
 
-class Prestasi extends CI_Controller
+class Ekstrakurikuler extends CI_Controller
 {
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->model("ModelPrestasi");
+		$this->load->model("ModelEkstrakurikuler");
 	}
 
 	public function index()
     {
-        $dataPrestasi = $this->ModelPrestasi->getAll();
+        $dataEkstrakurikuler = $this->ModelEkstrakurikuler->getAll();
         $data = array(
-            "prestasi" => $dataPrestasi
+            "ekstrakurikuler" => $dataEkstrakurikuler
         ); 
         $this->load->view('header');
-        $this->load->view('content/prestasi/v_list_prestasi', $data);
+        $this->load->view('content/ekstrakurikuler/v_list_ekstrakurikuler', $data);
         $this->load->view('footer');
     }
 
     // untuk me-load tampilan form tambah barang
     public function tambah(){
         $this->load->view('header');
-        $this->load->view("content/prestasi/v_add_prestasi");
+        $this->load->view("content/ekstrakurikuler/v_add_ekstrakurikuler");
         $this->load->view('footer');
     }
     
@@ -46,24 +46,24 @@ class Prestasi extends CI_Controller
             'deskripsi'=>$deskripsi,
             'gambar' =>$gambar
         ); 
-        $this->ModelPrestasi->insertGetId($data); 
-        redirect('prestasi'); 
+        $this->ModelEkstrakurikuler->insertGetId($data); 
+        redirect('ekstrakurikuler'); 
     } 
 
     public function ubah($id) 
     { 
-        $prestasi = $this->ModelPrestasi->getByPrimaryKey($id); 
+        $ekstrakurikuler = $this->ModelEkstrakurikuler->getByPrimaryKey($id); 
         $data = array( 
-            "prestasi" => $prestasi, 
+            "ekstrakurikuler" => $ekstrakurikuler, 
         ); 
         $this->load->view('header');
-        $this->load->view('content/prestasi/v_update_prestasi',$data); 
+        $this->load->view('content/ekstrakurikuler/v_update_ekstrakurikuler',$data); 
         $this->load->view('footer');
     } 
  
     public function update() 
     { 
-        $id = $this->input->post('id_prestasi'); 
+        $id = $this->input->post('id_ekstrakurikuler'); 
         $nama = $this->input->post('nama');
         $deskripsi = $this->input->post('deskripsi');
         $gambar =  $_FILES['gambar'];
@@ -85,14 +85,14 @@ class Prestasi extends CI_Controller
     
         echo var_dump($data); 
         echo var_dump($id); 
-        $this->ModelPrestasi->update($id, $data); 
-        redirect('prestasi'); 
+        $this->ModelEkstrakulikuler->update($id, $data); 
+        redirect('ekstrakurikuler'); 
     } 
  
     public function delete() 
     { 
-        $id = $this->input->post('id_prestasi'); 
-        $this->ModelPrestasi->delete($id); 
-        redirect('prestasi'); 
+        $id = $this->input->post('id_ekstrakurikuler'); 
+        $this->ModelEkstrakurikuler->delete($id); 
+        redirect('ekstrakurikuler'); 
     } 
 }

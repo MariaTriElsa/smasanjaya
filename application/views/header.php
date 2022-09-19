@@ -46,7 +46,7 @@
             </a>
           </li>
           <li>
-            <a href="<?=base_url()?>">
+            <a href="<?=base_url()?>aboutus">
             <!-- <i class="nc-icon nc-single-02"></i> -->
               <p>About Us</p>
             </a>
@@ -64,7 +64,7 @@
             </a>
           </li>
           <li>
-            <a href="<?=base_url()?>">
+            <a href="<?=base_url()?>fasilitas">
             <!-- <i class="nc-icon nc-single-02"></i> -->
               <p>Fasilitas</p>
             </a>
@@ -76,9 +76,9 @@
             </a>
           </li>
           <li>
-          <a href="<?=base_url()?>">
+          <a href="<?=base_url()?>Ekstrakurikuler">
               <!-- <i class="nc-icon nc-pin-3"></i> -->
-              <p>Ekstrakulikuler</p>
+              <p>Ekstrakurikuler</p>
             </a>
           </li>
           <li>
@@ -88,7 +88,7 @@
             </a>
           </li>
           <li>
-          <a href="<?=base_url()?>">
+          <a href="<?=base_url()?>berita">
               <!-- <i class="nc-icon nc-pin-3"></i> -->
               <p>Berita</p>
             </a>
@@ -106,7 +106,7 @@
             </a>
           </li>
           <li>
-          <a href="<?=base_url()?>">
+          <a href="<?=base_url()?>prestasi">
               <!-- <i class="nc-icon nc-pin-3"></i> -->
               <p>Prestasi</p>
             </a>

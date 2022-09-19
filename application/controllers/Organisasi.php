@@ -82,11 +82,7 @@ class Organisasi extends CI_Controller
             'deskripsi'=>$deskripsi,
             'gambar' =>$gambar
         ); 
-        // $data = array( 
-        //     "nama" => $this->input->post('nama'), 
-        //     "peran" => $this->input->post('peran'), 
-        //     "testimoni" => $this->input->post('testimoni') 
-        // ); 
+    
         echo var_dump($data); 
         echo var_dump($id); 
         $this->ModelOrganisasi->update($id, $data); 

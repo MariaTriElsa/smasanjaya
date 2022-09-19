@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List Organisasi</title>
+    <title>List AboutUs</title>
     <!-- CSS only CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -35,11 +35,11 @@
 <div class="content">
     <div class="card">
         <div class="card-header">
-            <h3>Data Organisasi</h3>
+            <h3>Data AboutUs</h3>
         </div>
         <div class="card-footer">
-            <a href="<?= site_url('organisasi/tambah') ?>" class="btn btn-primary btn-sm">
-                <i class="fa fa-plus"></i>Tambah Organisasi
+            <a href="<?= site_url('aboutus/tambah') ?>" class="btn btn-primary btn-sm">
+                <i class="fa fa-plus"></i>Tambah About Us
             </a>
         </div>
         <div class="card-body">
@@ -48,26 +48,33 @@
                     <tr>
                         <th>Nomor</th>
                         <th>Nama</th>
-                        <th>Deskripsi</th>
-                        <th>Gambar</th>
+                        <th>Logo</th>
+                        <th>Visi</th>
+                        <th>Misi</th>
+                        <th>Sejarah</th>
+                        <th>Alamat</th>
                         <th>Action</th>
+
                     </tr>
                 </thead>
                 <tbody>
                     <?php
                     $no = 1;
-                    foreach ($organisasi as $o) {
+                    foreach ($aboutus as $a) {
                     ?>
                         <tr>
                             <td><?= $no++ ?></td>
-                            <td><?= $o->nama?></td>
-                            <td><?= $o->deskripsi ?></td>
-                            <td><img src="<?php echo base_url();?>upload/<?php echo $o->gambar?>" width="120" height="120"></td>
+                            <td><?= $a->nama?></td>
+                            <td><img src="<?php echo base_url();?>upload/<?php echo $a->logo?>" width="120" height="120"></td>
+                            <td><?= $a->visi?></td>
+                            <td><?= $a->misi ?></td>
+                            <td><?= $a->sejarah ?></td>
+                            <td><?= $a->alamat ?></td>
                             <td>
-                                <a href="<?= site_url("organisasi/ubah/$o->id_organisasi") ?>" class="btn btn-warning btn-sm">
+                                <a href="<?= site_url("aboutus/ubah/$a->id_aboutus") ?>" class="btn btn-warning btn-sm">
                                     <i class="fa fa-pencil"></i>
                                 </a>
-                                <a href="#" data-id="<?= $o->id_organisasi ?>" class="btn btn-danger btn-sm btn-delete-organisasi">
+                                <a href="#" data-id="<?= $a->id_aboutus ?>" class="btn btn-danger btn-sm btn-delete-aboutus">
                                     <i class="fa fa-trash"></i>
                                 </a>
                             </td>
@@ -93,26 +100,26 @@
             </div>
         </div>
     </div>
-    <form id="form-delete" method="post" action="<?= site_url('organisasi/delete') ?>">
-
+</div>
+    <form id="form-delete" method="post" action="<?= site_url('aboutus/delete') ?>">
     </form>
 </body>
 
 </html>
 <script>
     $(function() {
-        let idOrganisasi = 0
-        $(".btn-delete-organisasi").on("click", function() {
-            idOrganisasi = $(this).data("id");
-            console.log(idOrganisasi);
+        let idAboutus= 0
+        $(".btn-delete-aboutus").on("click", function() {
+            idAboutus= $(this).data("id");
+            console.log(idAboutus);
             $("#modal-confirm-delete").modal('show');
         });
         $("#btn-delete").on("click", function() {
             //panggil url untuk hapus data
             let inputId = $("<input>")
                 .attr("type", "hidden")
-                .attr("name", "id_organisasi")
-                .val(idOrganisasi);
+                .attr("name", "id_aboutus")
+                .val(idAboutus);
             let formDelete = $("#form-delete");
             formDelete.empty().append(inputId);
             formDelete.submit();

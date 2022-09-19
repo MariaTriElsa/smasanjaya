@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Form Ubah Organisasi</title>
+    <title>Form Ubah Prestasi</title>
     <!-- CSS only CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -19,30 +19,30 @@
     <div class="content">
     <div class="card">
         <div class="card-header">
-            <h3>Form Ubah Organisasi</h3>
+            <h3>Form Ubah Prestasi</h3>
         </div>
         <div class="card-body">
-            <form id="form-update-organisasi" method="post" action="<?= site_url('organisasi/update') ?>" enctype="multipart/form-data">
+            <form id="form-update-prestasi" method="post" action="<?= site_url('prestasi/update') ?>" enctype="multipart/form-data">
                 <div class="form-group">
                     <label class="form-label">Nama</label>
-                    <input require type="text" value="<?= $organisasi->nama?>" class="form-control" name="nama">
+                    <input require type="text" value="<?= $prestasi->nama?>" class="form-control" name="nama">
                 </div>
                 <div class="form-group">
                     <label class="form-label">Deskripsi</label>
-                    <input require type="text" value="<?= $organisasi->deskripsi?>" class="form-control" name="deskripsi">
+                    <input require type="text" value="<?= $prestasi->deskripsi?>" class="form-control" name="deskripsi">
                 </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Gambar</label>
-                    <input class="form-control" value="<?= $organisasi->gambar?>" type="file" id="formFile" name="gambar">
+                    <input class="form-control" value="<?= $prestasi->gambar?>" type="file" id="formFile" name="gambar">
                 </div>
-                <input type="hidden" name="id_organisasi" value="<?= $organisasi->id_organisasi ?>">
+                <input type="hidden" name="id_prestasi" value="<?= $prestasi->id_prestasi ?>">
             </form>
         </div>
         <div class="card-footer">
-            <button type="button" id="btn-update-organisasi" class="btn btn-success btn-sm">
+            <button type="button" id="btn-update-prestasi" class="btn btn-success btn-sm">
                 <i class="fa fa-save"></i> Simpan
             </button>
-            <a href="<?= site_url('organisasi') ?>" class="btn btn-primary btn-sm">
+            <a href="<?= site_url('prestasi') ?>" class="btn btn-primary btn-sm">
                 <i class="fa fa-reply"></i> Kembali
             </a>
         </div>
@@ -54,9 +54,9 @@
 
 <script>
     $(function (){
-        $("#btn-update-organisasi").on("click", function() {
+        $("#btn-update-prestasi").on("click", function() {
            
-                $("#form-update-organisasi").submit()
+                $("#form-update-prestasi").submit()
         })
     })
 </script>
