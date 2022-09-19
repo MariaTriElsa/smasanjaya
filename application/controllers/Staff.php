@@ -65,7 +65,7 @@ class Staff extends CI_Controller
  
     public function update() 
     { 
-        $id = $this->input->post('id_prestasi'); 
+        $id = $this->input->post('id_staff'); 
         $nama = $this->input->post('nama_staff');
         $jabatan = $this->input->post('jabatan');
         $foto =  $_FILES['foto'];
