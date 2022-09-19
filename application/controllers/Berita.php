@@ -48,8 +48,8 @@ class Berita extends CI_Controller
             'gambar_berita' =>$gambar,
             'tanggal'=>$tanggal
         ); 
-        $this->ModelOrganisasi->insertGetId($data); 
-        redirect('organisasi'); 
+        $this->ModelBerita->insertGetId($data); 
+        redirect('berita'); 
     } 
 
     public function ubah($id) 

@@ -35,15 +35,14 @@ gambar_fasilitas varchar (200)
 
 create table estrakurikuler (
 id_estakulikuler int primary key not null auto_increment,
-Nama_estrakulikuler varchar(200),
-Deskripsi_estrakulikuler varchar(200),
-Gambar_berita varchar(200)
+nama varchar(200),
+deskripsi varchar(200),
+gambar varchar(200)
 );
 
 create table berita(
 id_berita int primary key not null auto_increment,
 nama_berita varchar(200) not null,
-jumlah_berita varchar(200),
 deskripsi_berita varchar(200),
 gambar_berita varchar(200), 
 tanggal date
@@ -57,17 +56,17 @@ create table psb(
 
 create table pengumuman(
     id_pengumuman int primary key not null auto_increment,
-    nama_pengumuman varchar(200),
-    deskripsi_pengumuman varchar(200),
-    tanggal_pengumuman date,
-    file_pengumuman varchar(200)
+    nama varchar(200),
+    deskripsi varchar(200),
+    tanggal date,
+    file varchar(200)
 );
 
 create table organisasi(
     id_organisasi int primary key not null auto_increment,
-    nama_organisasi varchar(200),
-    deskripsi_organisasi varchar(200),
-    gambar_organisasi varchar(200) 
+    nama varchar(200),
+    deskripsi varchar(200),
+    gambar varchar(200) 
 );
 
 create table unduhBerkas(

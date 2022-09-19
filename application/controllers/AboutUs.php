@@ -98,7 +98,6 @@ class AboutUs extends CI_Controller
             'alamat'=>$alamat
             
         ); 
-    
         echo var_dump($data); 
         echo var_dump($id); 
         $this->ModelAboutUs->update($id, $data); 

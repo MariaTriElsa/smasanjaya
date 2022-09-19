@@ -1,96 +1,92 @@
 <?php
 
-class Staff extends CI_Controller
+class Psb extends CI_Controller
 {
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->model("ModelStaff");
+		$this->load->model("ModelPsb");
 	}
 
 	public function index()
     {
-        $dataStaff = $this->ModelStaff->getAll();
+        $dataPsb = $this->ModelPsb->getAll();
         $data = array(
-            "staff" => $dataStaff
+            "psb" => $dataPsb
         ); 
         $this->load->view('header');
-        $this->load->view('content/staff/v_list_staff', $data);
+        $this->load->view('content/psb/v_list_psb', $data);
         $this->load->view('footer');
     }
 
     // untuk me-load tampilan form tambah barang
     public function tambah(){
         $this->load->view('header');
-        $this->load->view("content/staff/v_add_staff");
+        $this->load->view("content/psb/v_add_psb");
         $this->load->view('footer');
     }
     
     public function insert() 
     { 
-        $nama = $this->input->post('nama_staff');
-        $jabatan = $this->input->post('jabatan');
-        $foto =  $_FILES['foto'];
-        if($foto=''){}else{
-            $config['upload_path']          = './upload/';
-            $config['allowed_types']        = 'gif|jpg|png|jpeg';
-            $this ->load->library('upload',$config);
-            if(!$this->upload->do_upload('foto')){
-                echo "Upload Gagal"; die();
-            }else{
-                $foto=$this->upload->data('file_name');
-            }
-        }
-        $deskripsi = $this->input->post('deskripsi');
-        $data = array( 
-            'nama_staff'=>$nama,
-            'jabatan'=>$jabatan,
-            'foto' =>$foto,
-            'deskripsi' =>$deskripsi
-        ); 
-        $this->ModelStaff->insertGetId($data); 
-        redirect('staff'); 
-    } 
-
-    public function ubah($id) 
-    { 
-        $staff= $this->ModelStaff->getByPrimaryKey($id); 
-        $data = array( 
-            "staff" => $staff, 
-        ); 
-        $this->load->view('header');
-        $this->load->view('content/staff/v_update_staff',$data); 
-        $this->load->view('footer');
-    } 
- 
-    public function update() 
-    { 
-        $id = $this->input->post('id_prestasi'); 
-        $nama = $this->input->post('nama_staff');
-        $jabatan = $this->input->post('jabatan');
-        $foto =  $_FILES['foto'];
+        $tahun= $this->input->post('tahun');
+        $deskripsi = $this->input->post('deskripsi_psb');
+        $gambar =  $_FILES['gambar_psb'];
         if($gambar=''){}else{
             $config['upload_path']          = './upload/';
             $config['allowed_types']        = 'gif|jpg|png|jpeg';
             $this ->load->library('upload',$config);
-            if(!$this->upload->do_upload('foto')){
+            if(!$this->upload->do_upload('gambar_psb')){
                 echo "Upload Gagal"; die();
             }else{
                 $gambar=$this->upload->data('file_name');
             }
         }
-        $deskripsi = $this->input->post('deskripsi');
         $data = array( 
-            'nama_staff'=>$nama,
-            'jabatan'=>$jabatan,
-            'foto' =>$foto,
-            'deskripsi' =>$deskripsi
+            'tahun'=>$tahun,
+            'deskripsi_psb'=>$deskripsi,
+            'gambar_psb' =>$gambar
+        ); 
+        $this->ModelPsb->insertGetId($data); 
+        redirect('psb'); 
+    } 
+
+    public function ubah($id) 
+    { 
+        $psb= $this->ModelPsb->getByPrimaryKey($id); 
+        $data = array( 
+            "psb" => $psb, 
+        ); 
+        $this->load->view('header');
+        $this->load->view('content/psb/v_update_psb',$data); 
+        $this->load->view('footer');
+    } 
+ 
+    public function update() 
+    { 
+        $id = $this->input->post('id_organisasi'); 
+        $tahun= $this->input->post('tahun');
+        $deskripsi = $this->input->post('deskripsi_psb');
+        $gambar =  $_FILES['gambar_psb'];
+        if($gambar=''){}else{
+            $config['upload_path']          = './upload/';
+            $config['allowed_types']        = 'gif|jpg|png|jpeg';
+            $this ->load->library('upload',$config);
+            if(!$this->upload->do_upload('gambar_psb')){
+                echo "Upload Gagal"; die();
+            }else{
+                $gambar=$this->upload->data('file_name');
+            }
+        }
+        $data = array( 
+            'tahun'=>$tahun,
+            'deskripsi_psb'=>$deskripsi,
+            'gambar_psb' =>$gambar
         ); 
     
         echo var_dump($data); 
         echo var_dump($id); 
-        $this->ModelStaff->update($id, $data); 
-        redirect('staff'); 
+        $this->ModelPsb->update($id, $data); 
+        redirect('psb'); 
     } 
  
     public function delete() 

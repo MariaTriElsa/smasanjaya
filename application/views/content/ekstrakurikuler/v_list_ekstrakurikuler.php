@@ -62,7 +62,7 @@
                             <td><?= $no++ ?></td>
                             <td><?= $e->nama?></td>
                             <td><?= $e->deskripsi ?></td>
-                            <td><img src="<?php echo base_url();?>upload/<?php echo $e->gambar?>" width="120" height="120"></td>
+                            <td><img src="<?php echo base_url();?>upload/<?php echo $e->gambar?>" style="width:354px;height:472px;"></td>
                             <td>
                                 <a href="<?= site_url("ekstrakurikuler/ubah/$e->id_ekstrakurikuler") ?>" class="btn btn-warning btn-sm">
                                     <i class="fa fa-pencil"></i>

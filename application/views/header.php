@@ -94,13 +94,13 @@
             </a>
           </li>
           <li>
-          <a href="<?=base_url()?>">
+          <a href="<?=base_url()?>pengumuman">
               <!-- <i class="nc-icon nc-pin-3"></i> -->
               <p>Pengumuman</p>
             </a>
           </li>
           <li>
-          <a href="<?=base_url()?>">
+          <a href="<?=base_url()?>psb">
               <!-- <i class="nc-icon nc-pin-3"></i> -->
               <p>Info PSB</p>
             </a>
@@ -112,7 +112,7 @@
             </a>
           </li>
           <li>
-            <a href="<?=base_url()?>">
+            <a href="<?=base_url()?>unduh berkas">
             <!-- <i class="nc-icon nc-single-02"></i> -->
               <p>Unduh Berkas</p>
             </a>
