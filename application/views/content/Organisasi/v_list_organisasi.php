@@ -62,7 +62,7 @@
                             <td><?= $no++ ?></td>
                             <td><?= $o->nama?></td>
                             <td><?= $o->deskripsi ?></td>
-                            <td><img src="<?php echo base_url();?>upload/<?php echo $o->gambar?>" width="120" height="120"></td>
+                            <td><img src="<?php echo base_url();?>upload/<?php echo $o->gambar?>"  style="width:250px;"></td>
                             <td>
                                 <a href="<?= site_url("organisasi/ubah/$o->id_organisasi") ?>" class="btn btn-warning btn-sm">
                                     <i class="fa fa-pencil"></i>

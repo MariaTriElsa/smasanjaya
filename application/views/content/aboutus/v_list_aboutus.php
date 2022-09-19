@@ -65,7 +65,7 @@
                         <tr>
                             <td><?= $no++ ?></td>
                             <td><?= $a->nama?></td>
-                            <td><img src="<?php echo base_url();?>upload/<?php echo $a->logo?>" width="120" height="120"></td>
+                            <td><img src="<?php echo base_url();?>upload/<?php echo $a->logo?>" style="width:250px;"></td>
                             <td><?= $a->visi?></td>
                             <td><?= $a->misi ?></td>
                             <td><?= $a->sejarah ?></td>

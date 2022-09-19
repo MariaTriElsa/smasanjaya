@@ -64,6 +64,12 @@
             </a>
           </li>
           <li>
+            <a href="<?=base_url()?>beasiswa">
+            <!-- <i class="nc-icon nc-single-02"></i> -->
+              <p>Beasiswa</p>
+            </a>
+          </li>
+          <li>
             <a href="<?=base_url()?>fasilitas">
             <!-- <i class="nc-icon nc-single-02"></i> -->
               <p>Fasilitas</p>

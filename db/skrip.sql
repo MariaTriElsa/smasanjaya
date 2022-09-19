@@ -88,4 +88,11 @@ create table prestasi(
     nama varchar(200),
     deskripsi varchar(200),
     gambar varchar(200)
-)
+);
+
+
+create table beasiswa(
+    id_beasiswa int primary key auto_increment not null,
+    nama varchar(200),
+    deskripsi varchar(200)
+);

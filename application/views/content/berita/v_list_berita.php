@@ -63,7 +63,7 @@
                             <td><?= $no++ ?></td>
                             <td><?= $b->nama_berita ?></td>
                             <td><?= $b->deskripsi_berita?></td>
-                            <td><img src="<?php echo base_url();?>upload/<?php echo $b->gambar_berita?>" width="120" height="120"></td>
+                            <td><img src="<?php echo base_url();?>upload/<?php echo $b->gambar_berita?>" style="width:250px;"></td>
                             <td><?= $b->tanggal?></td>
                             <td>
                                 <a href="<?= site_url("berita/ubah/$b->id_berita") ?>" class="btn btn-warning btn-sm">
