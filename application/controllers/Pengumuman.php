@@ -87,8 +87,10 @@ class Pengumuman extends CI_Controller
 			'file' =>$berkas
         ); 
 
-        $this->ModelPengumuman->update($id, $data); 
-        redirect('pengumuman'); 
+		echo var_dump($data);
+		echo var_dump($id);
+		$this->ModelPengumuman->update($id, $data);
+		redirect('pengumuman');
     } 
  
     public function delete() 
