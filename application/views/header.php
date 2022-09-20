@@ -24,13 +24,14 @@
   <div class="wrapper ">
     <div class="sidebar" data-color="white" data-active-color="danger">
       <div class="logo">
-        <a href="https://www.creative-tim.com" class="simple-text logo-mini">
+         <i class="nc-icon nc-bank"></i>
+        <!-- <a href="https://www.creative-tim.com" class="simple-text logo-mini">
           <div class="logo-image-small">
             <img src="<?=base_url()?>assets/img/logo-small.png">
-          </div>
+          </div> -->
           <!-- <p>CT</p> -->
         </a>
-        <a href="https://www.creative-tim.com" class="simple-text logo-normal">
+        <!-- <a href="https://www.creative-tim.com" class="simple-text logo-normal"> -->
           SMA SANJAYA 
           <!-- <div class="logo-image-big">
             <img src="../assets/img/logo-big.png">
