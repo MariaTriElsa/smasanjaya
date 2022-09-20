@@ -19,7 +19,7 @@
 <div class="content">  
     <div class="card">
         <div class="card-header">
-            <h3>Form Tambah Berita</h3>
+            <h3>Form Tambah Pengumuman</h3>
         </div>
         <div class="card-body">
             <form id="form-tambah-pengumuman" method="post" action="<?= site_url('pengumuman/insert') ?>" enctype="multipart/form-data">

@@ -77,7 +77,7 @@ class Pengumuman extends CI_Controller
             if(!$this->upload->do_upload('file')){
                 echo "Upload Gagal"; die();
             }else{
-                $filer=$this->upload->data('file_name');
+                $berkas=$this->upload->data('file_name');
             }
         }
         $data = array(
