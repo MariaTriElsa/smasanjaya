@@ -32,8 +32,12 @@
                     <input require type="text" value="<?= $pengumuman->deskripsi?>" class="form-control" name="deskripsi" placeholder="Deskripsi">
                 </div>
 				<div class="form-group">
+<<<<<<< HEAD
 					<label class="form-label">Tanggal</label>
 					<input require type="date" class="form-control" value="<?= date('Y-m-d')?>" name="tanggal" placeholder="Tanggal">
+=======
+					<input require type="hidden" class="form-control" value="<?= $pengumuman->tanggal?>" name="tanggal" placeholder="Tanggal">
+>>>>>>> 4bc90a238432efb1133f9c31a0ca3bebc2dfa04c
 				</div>
 				<div class="mb-3">
 					<label for="formFile" class="form-label">File</label>
