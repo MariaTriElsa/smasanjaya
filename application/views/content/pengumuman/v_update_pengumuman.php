@@ -33,7 +33,7 @@
                 </div>
 				<div class="form-group">
 					<label class="form-label">Tanggal</label>
-					<input require type="hidden" class="form-control" value="<?= date('Y-m-d')?>" name="tanggal" placeholder="Tanggal">
+					<input require type="date" class="form-control" value="<?= date('Y-m-d')?>" name="tanggal" placeholder="Tanggal">
 				</div>
 				<div class="mb-3">
 					<label for="formFile" class="form-label">File</label>
