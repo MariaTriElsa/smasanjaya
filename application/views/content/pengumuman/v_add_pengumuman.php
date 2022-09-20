@@ -32,8 +32,7 @@
                     <textarea require type="" class="form-control" name="deskripsi" placeholder="Deskripsi"></textarea>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Tanggal</label>
-                    <input require type="date" class="form-control" name="tanggal" placeholder="Tanggal">
+                    <input hidden require type="date" class="form-control" value="<?= date('Y-m-d')?>" name="tanggal" placeholder="Tanggal">
                 </div>
 				<div class="mb-3">
 					<label for="formFile" class="form-label">File</label>
