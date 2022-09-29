@@ -1,11 +1,15 @@
 <?php
 
-class Berkas extends CI_Controller
+class Berkas extends MY_Controller
 {
 	function __construct()
 	{
 		parent::__construct();
 		$this->load->model("ModelBerkas");
+		$this->check_login();
+		if ($this->session->userdata('id_role') != "1") {
+			redirect('', 'refresh');
+		}
 	}
 
 	public function index()

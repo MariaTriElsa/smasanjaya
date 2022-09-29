@@ -1,11 +1,15 @@
 <?php
 
-class Prestasi extends CI_Controller
+class Prestasi extends MY_Controller
 {
 	function __construct()
 	{
 		parent::__construct();
 		$this->load->model("ModelPrestasi");
+		$this->check_login();
+		if ($this->session->userdata('id_role') != "1") {
+			redirect('', 'refresh');
+		}
 	}
 
 	public function index()

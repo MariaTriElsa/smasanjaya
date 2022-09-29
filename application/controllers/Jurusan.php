@@ -1,11 +1,15 @@
 <?php
 
-class Jurusan extends CI_Controller
+class Jurusan extends MY_Controller
 {
 	function __construct()
 	{
 		parent::__construct();
 		$this->load->model("ModelJurusan");
+		$this->check_login();
+		if ($this->session->userdata('id_role') != "1") {
+			redirect('', 'refresh');
+		}
 	}
 
 	public function index()

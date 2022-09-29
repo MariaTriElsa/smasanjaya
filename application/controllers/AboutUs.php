@@ -1,11 +1,15 @@
 <?php
 
-class AboutUs extends CI_Controller
+class AboutUs extends MY_Controller
 {
 	function __construct()
 	{
 		parent::__construct();
 		$this->load->model("ModelAboutUs");
+		$this->check_login();
+		if ($this->session->userdata('id_role') != "1") {
+			redirect('', 'refresh');
+		}
 	}
 
 	public function index()

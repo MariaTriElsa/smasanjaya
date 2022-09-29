@@ -23,7 +23,7 @@
 								<ul class="menu-area-main">
 									<li><a href="<?= base_url() ?>">Home</a></li>
 									<li><a href="#about">About</a></li>
-									<li><a href="<?= base_url('/staff') ?>">Staff</a></li>
+									<li><a href="<?= base_url('/staffuser') ?>">Staff</a></li>
 									<li><a href="#about">Galeri</a></li>
 									<li><a href="#service">Prestasi</a></li>
 									<li class="dropdown">
