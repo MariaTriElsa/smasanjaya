@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php $this->load->view('layout/header'); ?>
-<?php $this->load->view('layout/topbar'); ?>
 <body>
+<?php $this->load->view('layout/topbar'); ?>
 <div class="content">
     <div class="card">
         <div class="card-header">
-            <h3>Data Berkas</h3>
-        </div>
-        <div class="card-footer">
-            <a href="<?= site_url('berkas/tambah') ?>" class="btn btn-primary btn-sm">
-                <i class="fa fa-plus"></i>Tambah Berkas
-            </a>
+			<center><h3>Unduh Berkas</h3></center>
         </div>
         <div class="card-body">
             <table class="table">
@@ -21,7 +16,7 @@
                         <th>Nama</th>
                         <th>Kategori</th>
                         <th>Berkas</th>
-                        <th>Action</th>
+                        <th>Unduh</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,12 +34,6 @@
 								   href="<?= base_url('upload/' . $b->file_berkas) ?>" download="<?= $b->nama_berkas ?>">
 									<i class="fa fa-download"></i>
 								</a>
-                                <a href="<?= site_url("berkas/ubah/$b->id_berkas") ?>" class="btn btn-warning btn-sm">
-                                    <i class="fa fa-pencil"></i>
-                                </a>
-                                <a href="#" data-id="<?= $b->id_berkas?>" class="btn btn-danger btn-sm btn-delete-berkas">
-                                    <i class="fa fa-trash"></i>
-                                </a>
                             </td>
                         </tr>
                     <?php
@@ -54,6 +43,8 @@
                 </tbody>
             </table>
         </div>
+	<div class="card-footer">
+	</div>
     </div>
     <div class="modal" id="modal-confirm-delete">
         <div class="modal-dialog">
@@ -72,7 +63,7 @@
 
     </form>
 </body>
-
+<?php $this->load->view('layout/footer');?>
 </html>
 <script>
     $(function() {
@@ -95,4 +86,4 @@
         });
     })
 </script>
-<?php $this->load->view('layout/footer');?>
+

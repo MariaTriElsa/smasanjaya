@@ -26,12 +26,7 @@
 					<img class="second-slide" src="<?php echo base_url();?>upload/<?php echo $f->gambar_fasilitas?>" alt="Second slide">
 					<div class="container">
 						<div class="carousel-caption relative">
-							<h1>Basic template</h1>
-							<p>It is a long established fact that a reader will be distracted by the readable content of a
-								page when looking at its layout. The point of using Lorem Ipsum is that it has a
-								more-or-less normal distribution of letters, as opposed to using 'Content here, content
-								here', making it look like readable English. Many desktop publishing packages and </p>
-							<a href="Javascript:void(0)">Read More</a>
+							<h1>SMA Sanjaya XIV Nanggulan(LOGO)</h1>
 						</div>
 					</div>
 				</div>

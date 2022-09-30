@@ -95,8 +95,22 @@ class Organisasi extends MY_Controller
  
     public function delete() 
     { 
-        $id = $this->input->post('id_organisasi'); 
-        $this->ModelOrganisasi->delete($id); 
+        $id = $this->input->post('id_organisasi');
+
+		//delete from directory and db
+		$data = $this->ModelOrganisasi->getByPrimaryKey($id);
+		$nama = './upload/'.$data->gambar;
+		error_reporting(E_ERROR);
+
+		if(is_readable($nama) && unlink($nama)){
+			$delete = $this->ModelOrganisasi->delete($id);
+			redirect(base_url('/organisasi'));
+			error_reporting(E_ERROR);
+		}else{
+			$delete = $this->ModelOrganisasi->delete($id);
+			redirect(base_url('/aboutus1'));
+			echo "Gagal";
+		}
         redirect('organisasi'); 
     } 
 }

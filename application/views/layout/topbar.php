@@ -31,8 +31,9 @@
 										<div class="rounded dropdown-content">
 											<a class="rounded p-3" href="#">Berita</a>
 											<a class="rounded p-3" href="#">Pengumuman</a>
-											<a class="rounded p-3" href="<?= base_url('/dokumen') ?>">Unduh</a>
+											<a class="rounded p-3" href="<?= base_url('/berkasuser') ?>">Unduh</a>
 											<a class="rounded p-3" href="#">Kontak</a>
+											<a class="rounded p-3" href="<?= base_url('/aboutus') ?>">Login</a>
 										</div>
 									</li>
 								</ul>

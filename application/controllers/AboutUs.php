@@ -110,8 +110,21 @@ class AboutUs extends MY_Controller
  
     public function delete() 
     { 
-        $id = $this->input->post('id_aboutus'); 
-        $this->ModelAboutUs->delete($id); 
+        $id = $this->input->post('id_aboutus');
+		//delete from directory and db
+		$data = $this->ModelAboutUs->getByPrimaryKey($id);
+		$nama = './upload/'.$data->logo;
+		error_reporting(E_ERROR);
+
+		if(is_readable($nama) && unlink($nama)){
+			$delete = $this->ModelAboutUs->delete($id);
+			redirect(base_url('/aboutus'));
+			error_reporting(E_ERROR);
+		}else{
+			$delete = $this->ModelAboutUs->delete($id);
+			redirect(base_url('/aboutus1'));
+			echo "Gagal";
+		}
         redirect('aboutus'); 
     } 
 }

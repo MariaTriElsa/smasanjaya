@@ -95,8 +95,21 @@ class Fasilitas extends MY_Controller
  
     public function delete() 
     { 
-        $id = $this->input->post('id_fasilitas'); 
-        $this->ModelFasilitas->delete($id); 
+        $id = $this->input->post('id_fasilitas');
+		//delete from directory and db
+		$data = $this->ModelFasilitas->getByPrimaryKey($id);
+		$nama = './upload/'.$data->gambar_fasilitas;
+		error_reporting(E_ERROR);
+
+		if(is_readable($nama) && unlink($nama)){
+			$delete = $this->ModelFasilitas->delete($id);
+			redirect(base_url('/fasilitas'));
+			error_reporting(E_ERROR);
+		}else{
+			$delete = $this->ModelFasilitas->delete($id);
+			redirect(base_url('/aboutus1'));
+			echo "Gagal";
+		}
         redirect('fasilitas'); 
     } 
 }

@@ -71,10 +71,10 @@
                             <td><?= $a->sejarah ?></td>
                             <td><?= $a->alamat ?></td>
                             <td>
-                                <a href="<?= site_url("aboutus/ubah/$a->id_aboutus") ?>" class="btn btn-warning btn-sm">
+                                <a href="<?= site_url("aboutus/ubah/$a->id") ?>" class="btn btn-warning btn-sm">
                                     <i class="fa fa-pencil"></i>
                                 </a>
-                                <a href="#" data-id="<?= $a->id_aboutus ?>" class="btn btn-danger btn-sm btn-delete-aboutus">
+                                <a href="#" data-id="<?= $a->id ?>" class="btn btn-danger btn-sm btn-delete-aboutus">
                                     <i class="fa fa-trash"></i>
                                 </a>
                             </td>
