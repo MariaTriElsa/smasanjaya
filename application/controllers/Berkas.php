@@ -1,11 +1,15 @@
 <?php
 
-class Berkas extends CI_Controller
+class Berkas extends MY_Controller
 {
 	function __construct()
 	{
 		parent::__construct();
 		$this->load->model("ModelBerkas");
+		$this->check_login();
+		if ($this->session->userdata('id_role') != "1") {
+			redirect('', 'refresh');
+		}
 	}
 
 	public function index()
@@ -92,7 +96,20 @@ class Berkas extends CI_Controller
 	public function delete()
 	{
 		$id = $this->input->post('id_berkas');
-		$this->ModelBerkas->delete($id);
+		//delete from directory and db
+		$data = $this->ModelBerkas->getByPrimaryKey($id);
+		$nama = './upload/'.$data->file_berkas;
+		error_reporting(E_ERROR);
+
+		if(is_readable($nama) && unlink($nama)){
+			$delete = $this->ModelBerkas->delete($id);
+			redirect(base_url('/berkas'));
+			error_reporting(E_ERROR);
+		}else{
+			$delete = $this->ModelBerkas->delete($id);
+			redirect(base_url('/berkas'));
+			echo "Gagal";
+		}
 		redirect('berkas');
 	}
 }

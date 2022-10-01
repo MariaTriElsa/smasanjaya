@@ -1,11 +1,15 @@
 <?php
 
-class Beasiswa extends CI_Controller
+class Beasiswa extends MY_Controller
 {
 	function __construct()
 	{
 		parent::__construct();
 		$this->load->model("ModelBeasiswa");
+		$this->check_login();
+		if ($this->session->userdata('id_role') != "1") {
+			redirect('', 'refresh');
+		}
 	}
 
 	public function index()

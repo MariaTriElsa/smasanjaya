@@ -2,7 +2,7 @@
 
 class ModelAboutUs extends CI_Model {
     var $table = "aboutus";
-    var $primaryKey = "id_aboutus";
+    var $primaryKey = "id";
 
     // function untuk get all data barang
     public function getAll()

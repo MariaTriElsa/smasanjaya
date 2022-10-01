@@ -1,11 +1,15 @@
 <?php
 
-class Berita extends CI_Controller
+class Berita extends MY_Controller
 {
 	function __construct()
 	{
 		parent::__construct();
 		$this->load->model("ModelBerita");
+		$this->check_login();
+		if ($this->session->userdata('id_role') != "1") {
+			redirect('', 'refresh');
+		}
 	}
 
 	public function index()
@@ -95,8 +99,22 @@ class Berita extends CI_Controller
  
     public function delete() 
     { 
-        $id = $this->input->post('id_berita'); 
-        $this->ModelBerita->delete($id); 
+        $id = $this->input->post('id_berita');
+
+		//delete from directory and db
+		$data = $this->ModelBerita->getByPrimaryKey($id);
+		$nama = './upload/'.$data->gambar_berita;
+		error_reporting(E_ERROR);
+
+		if(is_readable($nama) && unlink($nama)){
+			$delete = $this->ModelBerita->delete($id);
+			redirect(base_url('/berita'));
+			error_reporting(E_ERROR);
+		}else{
+			$delete = $this->ModelBerita->delete($id);
+			redirect(base_url('/aboutus1'));
+			echo "Gagal";
+		}
         redirect('berita'); 
     } 
 }
