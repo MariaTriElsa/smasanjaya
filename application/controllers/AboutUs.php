@@ -71,7 +71,6 @@ class AboutUs extends CI_Controller
  
     public function update() 
     { 
-
         $id = $this->input->post('id_aboutus');
         $nama = $this->input->post('nama');
         $logo =  $_FILES['logo'];

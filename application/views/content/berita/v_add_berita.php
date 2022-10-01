@@ -24,8 +24,8 @@
         <div class="card-body">
             <form id="form-tambah-berita" method="post" action="<?= site_url('berita/insert') ?>" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label class="form-label">Nama</label>
-                    <input require type="text" class="form-control" name="nama_berita" placeholder="Nama">
+                    <label class="form-label">Judul</label>
+                    <input require type="text" class="form-control" name="nama_berita" placeholder="Judul">
                 </div>
                 <div class="form-group">
                     <label class="form-label">Deskripsi</label>

@@ -2,8 +2,8 @@ create database ppl_projek;
 use ppl_projek;
 
 create table aboutUs(
-    id_aboutUs int not null primary key auto_increment,
-    nama_aboutUs varchar(200) not null,
+    id_aboutus int not null primary key auto_increment,
+    nama varchar(200) not null,
     logo varchar(200) not null,
     visi varchar(200) not null,
     misi varchar(200) not null,

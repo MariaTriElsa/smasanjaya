@@ -62,7 +62,7 @@
                             <td><?= $no++ ?></td>
                             <td><?= $p->nama?></td>
                             <td><?= $p->deskripsi ?></td>
-                            <td><img src="<?php echo base_url();?>upload/<?php echo $p->gambar?>" width="120" height="120"></td>
+                            <td><img src="<?php echo base_url();?>upload/<?php echo $p->gambar?>" style="width:250px;"></td>
                             <td>
                                 <a href="<?= site_url("prestasi/ubah/$p->id_prestasi") ?>" class="btn btn-warning btn-sm">
                                     <i class="fa fa-pencil"></i>

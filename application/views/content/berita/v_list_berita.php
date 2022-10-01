@@ -47,7 +47,7 @@
                 <thead>
                     <tr>
                         <th>Nomor</th>
-                        <th>Nama</th>
+                        <th>Judul</th>
                         <th>Deskripsi</th>
                         <th>Gambar</th>
                         <th>Tanggal</th>

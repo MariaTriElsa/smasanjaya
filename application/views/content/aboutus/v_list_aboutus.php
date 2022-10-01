@@ -44,7 +44,7 @@
         </div>
         <div class="card-body">
             <table class="table">
-                <thead>
+            <thead >
                     <tr>
                         <th>Nomor</th>
                         <th>Nama</th>
