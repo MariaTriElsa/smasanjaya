@@ -3,11 +3,18 @@
 <?php $this->load->view('layout/header'); ?>
 <body>
 <?php $this->load->view('layout/topbar'); ?>
+<div id="screenshot" class="Screenshot">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="titlepage">
+					<h3>Unduh Berkas</h3>
+				</div>
+			</div>
+		</div>
+	</div>
 <div class="content">
     <div class="card">
-        <div class="card-header">
-			<center><h3>Unduh Berkas</h3></center>
-        </div>
         <div class="card-body">
             <table class="table">
                 <thead>
@@ -62,6 +69,7 @@
     <form id="form-delete" method="post" action="<?= site_url('berkas/delete') ?>">
 
     </form>
+</div>
 </body>
 <?php $this->load->view('layout/footer');?>
 </html>
