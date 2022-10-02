@@ -47,6 +47,10 @@
                     <label class="form-label">Sejarah</label>
                     <textarea require type="" class="form-control" name="sejarah" placeholder="Sejarah"></textarea>
                 </div>
+				<div class="form-group">
+					<label class="form-label">Kontak</label>
+					<input require type="text" class="form-control" name="kontak" placeholder="Kontak">
+				</div>
               
                 </div>
             </form>

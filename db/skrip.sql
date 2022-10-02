@@ -8,7 +8,8 @@ create table aboutUs(
     visi varchar(200) not null,
     misi varchar(200) not null,
     alamat varchar(200) not null,
-    sejarah varchar(200) not null
+    sejarah varchar(200) not null,
+    kontak varchar(200) not null
 );
 
 create table staff(

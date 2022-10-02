@@ -29,6 +29,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Logo</label>
+					<input value="<?= $aboutus->logo?>" type="hidden" id="formFile" name="logo">
                     <input class="form-control" value="<?= $aboutus->logo?>" type="file" id="formFile" name="logo">
                 </div>
                 <div class="form-group">
@@ -47,7 +48,7 @@
                     <label class="form-label">Alamat</label>
                     <input require type="text" value="<?= $aboutus->alamat?>" class="form-control" name="alamat" placeholder="Alamat">
                 </div>
-                <input type="hidden" name="id_aboutus" value="<?= $aboutus->id_aboutus ?>">
+                <input type="hidden" name="id_aboutus" value="<?= $aboutus->id ?>">
             </form>
         </div>
         <div class="card-footer">
