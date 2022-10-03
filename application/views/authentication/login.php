@@ -4,7 +4,7 @@
 	</div>
 	<!-- /.login-logo -->
 	<div class="login-box-body">
-	
+	<p class="login-box-msg text-bold">SIA SMA SANJAYA </p>
 		<p class="login-box-msg text-bold"> Masuk Dengan Email & Password Anda</p>
 		<form method="post" action="<?php echo base_url('auth/login'); ?>" role="login">
 			<div class="form-group has-feedback">
@@ -34,15 +34,15 @@
 		<?php echo $this->session->flashdata('alert', true); ?>
 	</div>
 	<br>
-	<div class="box box-solid box-info">
+	<!-- <div class="box box-solid box-info">
 		<div class="box-header">
 				<h3 class="box-title">User Login</h3>
 		</div>
-		<div class="box-body">
+		<!-- <div class="box-body">
 			<b>E-mail</b> : admin@mail.com (administrator) <br>
 			<b>Password</b> : password
-	</div> 
-</div>
+	</div>  -->
+</div> -->
 
 
 <script>
