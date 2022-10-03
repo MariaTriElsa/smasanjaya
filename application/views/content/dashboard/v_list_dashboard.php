@@ -3,8 +3,6 @@
 <?php $this->load->view('layout/header'); ?>
 <?php $this->load->view('layout/topbar'); ?>
 <body>
-
-
 	<section class="slider_section>">
 		<div id="myCarousel" class="carousel slide banner-main" data-ride="carousel">
 			<div class="carousel-inner">

@@ -1,9 +1,10 @@
 <div class="login-box">
 	<div>
-		<marquee><h3>Kalau url /staffuser atau /dashboard bisa masuk ya, kalau url milik admin nggak bisa harus login</h3></marquee>
+		<!-- <marquee><h3>Kalau url /staffuser atau /dashboard bisa masuk ya, kalau url milik admin nggak bisa harus login</h3></marquee> -->
 	</div>
 	<!-- /.login-logo -->
 	<div class="login-box-body">
+	
 		<p class="login-box-msg text-bold"> Masuk Dengan Email & Password Anda</p>
 		<form method="post" action="<?php echo base_url('auth/login'); ?>" role="login">
 			<div class="form-group has-feedback">

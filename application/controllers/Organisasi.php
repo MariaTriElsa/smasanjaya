@@ -86,7 +86,6 @@ class Organisasi extends MY_Controller
             'deskripsi'=>$deskripsi,
             'gambar' =>$gambar
         ); 
-    
         echo var_dump($data); 
         echo var_dump($id); 
         $this->ModelOrganisasi->update($id, $data); 

@@ -33,19 +33,24 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">Visi</label>
-                    <textarea require type="" class="form-control" name="visi" placeholder="Visi"></textarea>
+                    <textarea  require type="" class="form-control" name="visi" placeholder="Visi"></textarea>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Misi</label>
                     <textarea require type="" class="form-control" name="misi" placeholder="Misi"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Sejarah</label>
+                    <textarea require type="" class="form-control" name="sejarah" placeholder="Sejarah"></textarea>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Alamat</label>
                     <textarea require type="" class="form-control" name="alamat" placeholder="Alamat"></textarea>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Sejarah</label>
-                    <textarea require type="" class="form-control" name="sejarah" placeholder="Sejarah"></textarea>
+                    <label class="form-label">Kontak</label>
+                    <textarea require type="" class="form-control" name="kontak" placeholder="Kontak"></textarea>
                 </div>
               
                 </div>

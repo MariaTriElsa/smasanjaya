@@ -35,6 +35,10 @@
                     <label class="form-label">Testimoni</label>
                     <textarea require type="" class="form-control" name="testimoni"></textarea>
                 </div>
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Foto</label>
+                    <input class="form-control" type="file" id="formFile" name="gambar">
+                </div>
             </form>
         </div>
         <div class="card-footer">

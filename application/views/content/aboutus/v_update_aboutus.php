@@ -47,7 +47,11 @@
                     <label class="form-label">Alamat</label>
                     <input require type="text" value="<?= $aboutus->alamat?>" class="form-control" name="alamat" placeholder="Alamat">
                 </div>
-                <input type="hidden" name="id_aboutus" value="<?= $aboutus->id_aboutus ?>">
+                <div class="form-group">
+                    <label class="form-label">Kontak</label>
+                    <input require type="text" value="<?= $aboutus->kontak?>" class="form-control" name="kontak" placeholder="Kontak">
+                </div>
+                <input type="hidden" name="id" value="<?= $aboutus->id?>">
             </form>
         </div>
         <div class="card-footer">
