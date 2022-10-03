@@ -1,10 +1,6 @@
 <div class="login-box">
 	<div>
-<<<<<<< HEAD
 		<div style="text-align: center;"><h3>SIA SMA SANJAYA</h3></div>
-=======
-		<!-- <marquee><h3>Kalau url /staffuser atau /dashboard bisa masuk ya, kalau url milik admin nggak bisa harus login</h3></marquee> -->
->>>>>>> a59bcc48bf5041e8af9e95e56623082d3ba38014
 	</div>
 	<!-- /.login-logo -->
 	<div class="login-box-body">
@@ -34,24 +30,7 @@
 		<?php echo $this->session->flashdata('alert', true); ?>
 	</div>
 	<br>
-<<<<<<< HEAD
-	<div hidden class="box box-solid box-info">
-=======
-	<!-- <div class="box box-solid box-info">
->>>>>>> a604ea27e5912404601991d380016812c4fc8a68
-		<div class="box-header">
-			<h3 class="box-title">User Login</h3>
-		</div>
-		<!-- <div class="box-body">
-			<b>E-mail</b> : admin@mail.com (administrator) <br>
-			<b>Password</b> : password
-<<<<<<< HEAD
-		</div>
-	</div>
-=======
-	</div>  -->
-</div> -->
->>>>>>> a604ea27e5912404601991d380016812c4fc8a68
+</div>
 
 
 	<script>
