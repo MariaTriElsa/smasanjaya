@@ -49,13 +49,15 @@ class AboutUs extends MY_Controller
         $misi= $this->input->post('misi');
         $alamat = $this->input->post('alamat');
         $sejarah = $this->input->post('sejarah');
+        $kontak = $this->input->post('kontak');
         $data = array( 
             'nama' =>$nama,
             'logo'=>$logo,
             'visi'=>$visi,
             'misi' =>$misi,
             'sejarah'=>$sejarah,
-            'alamat'=>$alamat
+            'alamat'=>$alamat,
+            'kontak'=>$kontak
             
         ); 
         $this->ModelAboutUs->insertGetId($data); 
@@ -75,7 +77,6 @@ class AboutUs extends MY_Controller
  
     public function update() 
     { 
-
         $id = $this->input->post('id_aboutus');
         $nama = $this->input->post('nama');
         $logo =  $_FILES['logo'];
@@ -93,14 +94,15 @@ class AboutUs extends MY_Controller
         $misi= $this->input->post('misi');
         $alamat = $this->input->post('alamat');
         $sejarah = $this->input->post('sejarah');
+        $kontak = $this->input->post('kontak');
         $data = array( 
             'nama' =>$nama,
             'logo'=>$logo,
             'visi'=>$visi,
             'misi' =>$misi,
             'sejarah'=>$sejarah,
-            'alamat'=>$alamat
-            
+            'alamat'=>$alamat,
+            'kontak'=>$kontak
         ); 
         echo var_dump($data); 
         echo var_dump($id); 

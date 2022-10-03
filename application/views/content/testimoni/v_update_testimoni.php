@@ -35,6 +35,10 @@
                     <label class="form-label">Testimoni</label>
                     <textarea require type="text" value="<?= $testimoni->testimoni?>" class="form-control" name="testimoni"></textarea>
                 </div>
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Foto</label>
+                    <input class="form-control" value="<?= $testimoni->gambar?>" type="file" id="formFile" name="gambar">
+                </div>
                 <input type="hidden" name="id_testimoni" value="<?= $testimoni->id_testimoni ?>">
             </form>
         </div>

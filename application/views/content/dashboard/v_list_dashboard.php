@@ -3,6 +3,7 @@
 <?php $this->load->view('layout/header'); ?>
 <?php $this->load->view('layout/topbar'); ?>
 <body>
+<<<<<<< HEAD
 <section class="slider_section>">
 	<div id="myCarousel" class="carousel slide banner-main" data-ride="carousel">
 		<div class="carousel-inner">
@@ -23,6 +24,13 @@
 				<div class="carousel-item">
 					<img class="second-slide" src="<?php echo base_url(); ?>upload/<?php echo $f->gambar_fasilitas ?>"
 						 alt="Second slide">
+=======
+	<section class="slider_section>">
+		<div id="myCarousel" class="carousel slide banner-main" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img class="first-slide" src="<?= base_url('assets/images/bannerfirst.png') ?>" alt="First slide">
+>>>>>>> a59bcc48bf5041e8af9e95e56623082d3ba38014
 					<div class="container">
 						<div class="carousel-caption relative">
 							<h1>SMA Sanjaya XIV Nanggulan(LOGO)</h1>

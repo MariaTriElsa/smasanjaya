@@ -25,11 +25,15 @@
             <form id="form-tambah-staff" method="post" action="<?= site_url('staff/insert') ?>" enctype="multipart/form-data">
                 <div class="form-group">
                     <label class="form-label">Nama</label>
-                    <input require type="text" class="form-control" name="nama_staff">
+                    <input require type="text" class="form-control" name="nama_staff" placeholder="Nama">
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Jabatan</label>
-                    <input require type="text" class="form-control" name="jabatan">
+                    <label class="form-label">Jabatan : </label>
+                    <select name="jabatan" id="">
+                        <option value="Guru">Guru</option>
+                        <option value="Staf TU">Staf TU</option>
+                    </select>
+                    
                 </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Foto</label>
@@ -37,7 +41,7 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">Deskripsi</label>
-                    <textarea require type="" class="form-control" name="deskripsi"></textarea>
+                    <textarea require type="" class="form-control" name="deskripsi" placeholder="Deskripsi"></textarea>
                 </div>
                 </div>
             </form>

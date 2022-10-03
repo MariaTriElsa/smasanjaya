@@ -50,6 +50,7 @@
                         <th>Nama</th>
                         <th>Peran</th>
                         <th>Testimoni</th>
+                        <th>Foto</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -63,6 +64,7 @@
                             <td><?= $t->nama ?></td>
                             <td><?= $t->peran ?></td>
                             <td><?= $t->testimoni ?></td>
+                            <td><img src="<?php echo base_url();?>upload/<?php echo $t->gambar?>"  style="width:250px;"></td>
                             <td>
                                 <a href="<?= site_url("testimoni/ubah/$t->id_testimoni") ?>" class="btn btn-warning btn-sm">
                                     <i class="fa fa-pencil"></i>
