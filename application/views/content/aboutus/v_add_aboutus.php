@@ -52,10 +52,6 @@
                     <label class="form-label">Kontak</label>
                     <textarea require type="" class="form-control" name="kontak" placeholder="Kontak"></textarea>
                 </div>
-				<div class="form-group">
-					<label class="form-label">Kontak</label>
-					<input require type="text" class="form-control" name="kontak" placeholder="Kontak">
-				</div>
               
                 </div>
             </form>
