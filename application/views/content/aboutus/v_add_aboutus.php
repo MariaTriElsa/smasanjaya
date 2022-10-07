@@ -33,20 +33,39 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">Visi</label>
-                    <textarea  require type="" class="form-control" name="visi" placeholder="Visi"></textarea>
+                    <textarea  required type="" class="form-control" name="visi" placeholder="Visi"></textarea>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Misi</label>
-                    <textarea require type="" class="form-control" name="misi" placeholder="Misi"></textarea>
+                    <textarea required type="" class="form-control" name="misi" placeholder="Misi"></textarea>
                 </div>
                 
                 <div class="form-group">
                     <label class="form-label">Sejarah</label>
-                    <textarea require type="" class="form-control" name="sejarah" placeholder="Sejarah"></textarea>
+                    <textarea id="sejarah" rows="3" class="form-control" name="sejarah" onkeyup="resizeTextarea('sejarah')" data-resizable="true" placeholder="Sejarah"></textarea>
+                    
+                             
                 </div>
+                <script>
+                function resizeTextarea (id) {
+  var a = document.getElementById(id);
+  a.style.height = 'auto';
+  a.style.height = a.scrollHeight+'px';
+}
+
+function init() {
+  var a = document.getElementsByTagName('textarea');
+  for(var i=0,inb=a.length;i<inb;i++) {
+     if(a[i].getAttribute('data-resizable')=='true')
+      resizeTextarea(a[i].id);
+  }
+}
+
+addEventList
+                </script>     
                 <div class="form-group">
                     <label class="form-label">Alamat</label>
-                    <textarea require type="" class="form-control" name="alamat" placeholder="Alamat"></textarea>
+                    <textarea required type="" class="form-control" name="alamat" placeholder="Alamat"></textarea>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Kontak</label>
@@ -71,6 +90,7 @@
 </html>
 
 <script>
+    
     $(function (){
         $("#btn-save-aboutus").on("click", function() {
                 $("#form-tambah-aboutus").submit()

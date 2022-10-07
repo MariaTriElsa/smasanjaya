@@ -4,7 +4,7 @@
 	</div>
 	<!-- /.login-logo -->
 	<div class="login-box-body">
-	<p class="login-box-msg text-bold">SIA SMA SANJAYA </p>
+	<p class="login-box-msg text-bold">SMA SANJAYA </p>
 		<p class="login-box-msg text-bold"> Masuk Dengan Email & Password Anda</p>
 		<form method="post" action="<?php echo base_url('auth/login'); ?>" role="login">
 			<div class="form-group has-feedback">

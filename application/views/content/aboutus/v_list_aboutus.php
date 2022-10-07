@@ -43,8 +43,8 @@
             </a>
         </div>
         <div class="card-body">
-            <table class="table">
-            <thead >
+            <table class="table table-bordered">
+            <thead  >
                     <tr>
                         <th>No</th>
                         <th>Nama</th>
