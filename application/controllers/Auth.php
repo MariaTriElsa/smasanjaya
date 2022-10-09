@@ -100,7 +100,7 @@ class Auth extends MY_Controller
         );
         //melakukan pengalihan halaman sesuai dengan levelnya
         if ($this->session->userdata('id_role') == "1") {
-            redirect('aboutus');
+            redirect('welcome');
         }
 
         //proses login dan validasi nya
@@ -114,7 +114,7 @@ class Auth extends MY_Controller
 
                 //jika bernilai TRUE maka alihkan halaman sesuai dengan level nya
                 if ($data->id_role == '1') {
-                    redirect('aboutus');
+                    redirect('welcome');
                 }
             } else {
                 $this->template->load('authentication/layouts/template', 'authentication/login', $data);

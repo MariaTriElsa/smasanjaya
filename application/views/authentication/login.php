@@ -1,10 +1,8 @@
 <div class="login-box">
-	<div>
-		<div style="text-align: center;"><h3>SIA SMA SANJAYA</h3></div>
-	</div>
-	<!-- /.login-logo -->
 	<div class="login-box-body">
-	<p class="login-box-msg text-bold">SMA SANJAYA </p>
+
+		<img src="logosma.jpeg" alt="logo">
+	<h4 class="text-center">SMA SANJAYA</h4> <br>
 		<p class="login-box-msg text-bold"> Masuk Dengan Email & Password Anda</p>
 		<form method="post" action="<?php echo base_url('auth/login'); ?>" role="login">
 			<div class="form-group has-feedback">
@@ -19,12 +17,11 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-6 col-md-6" style="padding-bottom: 5px">
 					<button type="submit" name="submit" value="login" class="btn btn-primary btn-block btn-flat"><i
-								class="fa fa-sign-in" aria-hidden="true"></i> Masuk
+								class="fa fa-sign-in" aria-hidden="true" href="<?= site_url('welcome') ?>"></i> Masuk
 					</button>
 				</div>
 			</div>
 		</form>
-
 	</div>
 	<div id="myalert">
 		<?php echo $this->session->flashdata('alert', true); ?>

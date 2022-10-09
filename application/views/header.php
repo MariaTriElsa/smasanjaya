@@ -41,7 +41,7 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="active ">
-          <a href="<?=base_url()?>#">
+          <a href="<?=base_url()?>welcome">
               <!-- <i class="nc-icon nc-bank"></i> -->
               <p>Dashboard</p>
             </a>
