@@ -94,8 +94,7 @@ class Auth extends MY_Controller
     {
         $site = $this->Konfigurasi_model->listing();
         $data = array(
-            'title'     => 'Login | '.$site['nama_website'],
-            'favicon'   => $site['favicon'],
+            'title'     => 'Login | SMASANJAYA',
             'site'      => $site
         );
         //melakukan pengalihan halaman sesuai dengan levelnya
