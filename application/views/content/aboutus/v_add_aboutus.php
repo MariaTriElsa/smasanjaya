@@ -33,20 +33,20 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">Visi</label>
-                    <textarea  require type="" class="form-control" name="visi" placeholder="Visi"></textarea>
+                    <textarea  required type="" class="form-control" name="visi" placeholder="Visi"></textarea>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Misi</label>
-                    <textarea require type="" class="form-control" name="misi" placeholder="Misi"></textarea>
+                    <textarea required type="" class="form-control" name="misi" placeholder="Misi"></textarea>
                 </div>
                 
                 <div class="form-group">
                     <label class="form-label">Sejarah</label>
-                    <textarea require type="" class="form-control" name="sejarah" placeholder="Sejarah"></textarea>
-                </div>
+                    <textarea id="sejarah" class="form-control" name="sejarah" placeholder="Sejarah"></textarea>          
+                </div>  
                 <div class="form-group">
                     <label class="form-label">Alamat</label>
-                    <textarea require type="" class="form-control" name="alamat" placeholder="Alamat"></textarea>
+                    <textarea required type="" class="form-control" name="alamat" placeholder="Alamat"></textarea>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Kontak</label>
@@ -71,6 +71,7 @@
 </html>
 
 <script>
+    
     $(function (){
         $("#btn-save-aboutus").on("click", function() {
                 $("#form-tambah-aboutus").submit()
