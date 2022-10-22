@@ -43,6 +43,7 @@
             </a>
         </div>
         <div class="card-body">
+			<div class="table-responsive">
             <table class="table">
                 <thead>
                     <tr>
@@ -58,7 +59,7 @@
                     $no = 1;
                     foreach ($psb as $p) {
                     ?>
-                        <tr>
+                        <tr class="text-nowrap">
                             <td><?= $no++ ?></td>
                             <td><?= $p->tahun?></td>
                             <td><?= $p->deskripsi_psb?></td>
@@ -79,6 +80,7 @@
 
                 </tbody>
             </table>
+			</div>
         </div>
     </div>
     <div class="modal" id="modal-confirm-delete">

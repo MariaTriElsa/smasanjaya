@@ -43,6 +43,7 @@
             </a>
         </div>
         <div class="card-body">
+			<div class="table-responsive">
             <table class="table">
                 <thead>
                     <tr>
@@ -59,7 +60,7 @@
                     $no = 1;
                     foreach ($staff as $s) {
                     ?>
-                        <tr>
+                        <tr class="text-nowrap">
                             <td><?= $no++ ?></td>
                             <td><?= $s->nama_staff?></td>
                             <td><?= $s->jabatan ?></td>
@@ -80,6 +81,7 @@
 
                 </tbody>
             </table>
+			</div>
         </div>
     </div>
     <div class="modal" id="modal-confirm-delete">

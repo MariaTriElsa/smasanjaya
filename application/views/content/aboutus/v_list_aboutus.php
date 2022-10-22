@@ -43,6 +43,7 @@
             </a>
         </div>
         <div class="card-body">
+			<div class="table-responsive">
             <table class="table table-bordered">
             <thead  >
                     <tr>
@@ -63,7 +64,7 @@
                     $no = 1;
                     foreach ($aboutus as $a) {
                     ?>
-                        <tr>
+                        <tr class="text-nowrap">
                             <td><?= $no++ ?></td>
                             <td><?= $a->nama?></td>
                             <td><img src="<?php echo base_url();?>upload/<?php echo $a->logo?>" style="width:250px;"></td>
@@ -87,6 +88,7 @@
 
                 </tbody>
             </table>
+			</div>
         </div>
     </div>
     <div class="modal" id="modal-confirm-delete">
