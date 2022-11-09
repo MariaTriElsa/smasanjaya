@@ -13,7 +13,7 @@
     <h3><i class="mr-4"></i>DASHBOARD</h3>
    </div>
         <div class="row text-white">
-            <div class="card bg-info ml-5" style="width: 20rem;">
+            <div class="card bg-info ml-5" style="width: 18rem;">
             <div class="card-body">
                 <div class="card-body-icon">
                     <i class="nc-icon nc-single-02"></i>
@@ -23,7 +23,7 @@
                 <a href=""><p class="card-text text-white">Lihat Detail</p></a>
         </div>
         </div>
-        <div class="card bg-success ml-5" style="width: 20rem;">
+        <div class="card bg-success ml-5" style="width: 18rem;">
             <div class="card-body">
                 <div class="card-body-icon">
                     <i class="nc-icon nc-single-02"></i>
@@ -33,7 +33,7 @@
                 <a href=""><p class="card-text text-white">Lihat Detail</p></a>
         </div>
         </div>
-        <div class="card bg-danger ml-5" style="width: 20rem;">
+        <div class="card bg-danger ml-5" style="width: 18rem;">
             <div class="card-body">
                 <div class="card-body-icon">
                     <i class="nc-icon nc-single-02"></i>
@@ -45,7 +45,7 @@
         </div>
         </div>
         <div class="row mt-4">
-            <div class="card ml-5 text-white text-center" style="width: 20rem;">
+            <div class="card ml-5 text-white text-center" style="width: 18rem;">
                 <div class="card-header bg-danger display-4 pt-4 pb-4">
                     <i class="nc-icon nc-mobile"></i>
                 </div>
@@ -54,7 +54,7 @@
                     <a href="#" class="btn btn-danger">FOLLOW</a>
                 </div>
             </div>
-            <div class="card ml-5 text-white text-center" style="width: 20rem;">
+            <div class="card ml-5 text-white text-center" style="width: 18rem;">
                 <div class="card-header bg-info display-4 pt-4 pb-4">
                     <i class="nc-icon nc-email-85"></i>
                 </div>
@@ -63,7 +63,7 @@
                     <a href="#" class="btn btn-info">SEND</a>
                 </div>
             </div>
-            <div class="card ml-5 text-white text-center" style="width: 20rem;">
+            <div class="card ml-5 text-white text-center" style="width: 18rem;">
                 <div class="card-header bg-success display-4 pt-4 pb-4">
                     <i class="nc-icon nc-mobile"></i>
                 </div>
