@@ -79,7 +79,7 @@ class Staff extends MY_Controller
             $config['allowed_types']        = 'gif|jpg|png|jpeg';
             $this ->load->library('upload',$config);
             if(!$this->upload->do_upload('foto')){
-				$foto=$this->upload->data('file_name');
+				echo "Upload Gagal"; die();
             }else{
                 $foto=$this->upload->data('file_name');
             }

@@ -30,7 +30,7 @@
     
                 <div class="form-group">
                     <label class="form-label">Deskripsi</label>
-                    <textarea require type="" value="<?= $beasiswa->deskripsi?>" class="form-control" name="deskripsi"></textarea>
+                    <textarea class="form-control"  rows="30" cols="120"><?php echo $beasiswa->deskripsi; ?></textarea>
                 </div>
                 <input type="hidden" name="id_beasiswa" value="<?= $beasiswa->id_beasiswa ?>">
             </form>

@@ -29,11 +29,11 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">Deskripsi</label>
-                    <input require type="text" value="<?= $jurusan->deskripsi_jurusan?>" class="form-control" name="deskripsi_jurusan">
+                    <textarea class="form-control"  rows="30" cols="120"><?php echo $jurusan->deskripsi_jurusan; ?></textarea>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Keunggulan</label>
-                    <textarea require type="text" value="<?= $jurusan->keunggulan_jurusan?>" class="form-control" name="keunggulan_jurusan"></textarea>
+                    <textarea class="form-control"  rows="30" cols="120"><?php echo $jurusan->keunggulan_jurusan; ?></textarea>
                 </div>
                 <input type="hidden" name="id_jurusan" value="<?= $jurusan->id_jurusan ?>">
             </form>

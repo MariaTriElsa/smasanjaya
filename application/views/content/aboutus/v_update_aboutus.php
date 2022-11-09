@@ -42,24 +42,24 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">Visi</label>
-                    <input require type="text" value="<?= $aboutus->visi?>" class="form-control" name="visi" placeholder="Visi">
+                    <textarea class="form-control"  rows="30" cols="120"><?php echo $aboutus->visi; ?></textarea>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Misi</label>
-                    <input require type="text" value="<?= $aboutus->misi?>" class="form-control" name="misi" placeholder="Misi">
+                    <textarea class="form-control"  rows="30" cols="120"><?php echo $aboutus->misi; ?></textarea>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Sejarah</label>
-                    <input require type="text" value="<?= $aboutus->sejarah?>" class="form-control" name="sejarah" placeholder="Sejarah">
+                    <textarea class="form-control"  rows="30" cols="120"><?php echo $aboutus->sejarah; ?></textarea>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Alamat</label>
-                    <input require type="text" value="<?= $aboutus->alamat?>" class="form-control" name="alamat" placeholder="Alamat">
+                    <textarea class="form-control"  rows="30" cols="120"><?php echo $aboutus->alamat; ?></textarea>
                 </div>
                 <input type="hidden" name="id_aboutus" value="<?= $aboutus->id ?>">
                 <div class="form-group">
                     <label class="form-label">Kontak</label>
-                    <input require type="text" value="<?= $aboutus->kontak?>" class="form-control" name="kontak" placeholder="Kontak">
+                    <textarea class="form-control"  rows="30" cols="120"><?php echo $aboutus->kontak; ?></textarea>
                 </div>
                 <input type="hidden" name="id" value="<?= $aboutus->id?>">
             </form>

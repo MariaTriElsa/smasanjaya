@@ -29,7 +29,7 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">Deskripsi</label>
-                    <input require type="text" value="<?= $ekstrakurikuler->deskripsi?>" class="form-control" name="deskripsi">
+                    <textarea class="form-control"  rows="30" cols="120"><?php echo $ekstrakurikuler->deskripsi; ?></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Gambar</label>
@@ -42,7 +42,8 @@
 								<img src="<?php echo base_url();?>upload/<?php echo $ekstrakurikuler->gambar?>"  style="max-width:100px;">
 							</div>
 						</div>
-					</div>                </div>
+					</div>               
+                 </div>
                 <input type="hidden" name="id_ekstrakurikuler" value="<?= $ekstrakurikuler->id_ekstrakurikuler ?>">
             </form>
         </div>

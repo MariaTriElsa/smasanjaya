@@ -46,7 +46,7 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">Deskripsi</label>
-                    <input require type="text" value="<?= $staff->deskripsi?>" class="form-control" name="deskripsi">
+                    <textarea class="form-control"  rows="30" cols="120"><?php echo $staff->deskripsi; ?></textarea>
                 </div>
                 <input type="hidden" name="id_staff" value="<?= $staff->id_staff ?>">
             </form>

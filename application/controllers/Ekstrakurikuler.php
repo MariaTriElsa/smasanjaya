@@ -64,8 +64,36 @@ class Ekstrakurikuler extends MY_Controller
         $this->load->view('content/ekstrakurikuler/v_update_ekstrakurikuler',$data); 
         $this->load->view('footer');
     } 
- 
     public function update() 
+    { 
+        $id = $this->input->post('id_ekstrakurikuler'); 
+        $nama = $this->input->post('nama');
+        $deskripsi = $this->input->post('deskripsi');
+        $gambar =  $_FILES['gambar'];
+        if($gambar=''){}else{
+            $config['upload_path']          = './upload/';
+            $config['allowed_types']        = 'gif|jpg|png|jpeg';
+            $this ->load->library('upload',$config);
+            if(!$this->upload->do_upload('gambar')){
+				echo "Upload Gagal"; die();
+            }else{
+                $gambar=$this->upload->data('file_name');
+            }
+        }
+
+        $data = array( 
+            'nama'=>$nama,
+            'deskripsi'=>$deskripsi,
+            'gambar' =>$gambar
+           
+        ); 
+    
+        echo var_dump($data); 
+        echo var_dump($id); 
+        $this->ModelEkstrakurikuler->update($id, $data); 
+        redirect('ekstrakurikuler'); 
+    } 
+    public function update1() 
     { 
         $id = $this->input->post('id_ekstrakurikuler'); 
         $nama = $this->input->post('nama');
@@ -86,7 +114,6 @@ class Ekstrakurikuler extends MY_Controller
             'deskripsi'=>$deskripsi,
             'gambar' =>$gambar
         ); 
-    
         echo var_dump($data); 
         echo var_dump($id); 
         $this->ModelEkstrakurikuler->update($id, $data); 

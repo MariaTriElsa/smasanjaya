@@ -29,7 +29,7 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">Deskripsi</label>
-                    <input require type="text" value="<?= $fasilitas->deskripsi_fasilitas?>" class="form-control" name="deskripsi_fasilitas" placeholder="Deskripsi">
+                    <textarea class="form-control"  rows="30" cols="120"><?php echo $fasilitas->deskripsi_fasilitas; ?></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Gambar</label>

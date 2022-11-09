@@ -56,7 +56,6 @@
                         <th>Alamat</th>
 						<th>Kontak</th>
                         <th>Action</th>
-
                     </tr>
                 </thead>
                 <tbody>

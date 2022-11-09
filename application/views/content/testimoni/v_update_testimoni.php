@@ -33,7 +33,7 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">Testimoni</label>
-                    <textarea require type="text" value="<?= $testimoni->testimoni?>" class="form-control" name="testimoni"></textarea>
+                    <textarea class="form-control"  rows="30" cols="120"><?php echo $testimoni->testimoni; ?></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Foto</label>
