@@ -67,7 +67,7 @@ class Psb extends MY_Controller
  
     public function update() 
     { 
-        $id = $this->input->post('id_organisasi'); 
+        $id = $this->input->post('id_psb'); 
         $tahun= $this->input->post('tahun');
         $deskripsi = $this->input->post('deskripsi_psb');
         $gambar =  $_FILES['gambar_psb'];

@@ -68,7 +68,7 @@
                             <td><?php echo $p->file?></td>
                             <td>
                             <a class="btn btn-sm btn-primary text-white"
-								   href="<?= base_url('upload/' . $p->file) ?>" download="<?= $p->nama ?>">
+								   href="<?= base_url('upload/'. $p->file)?>" download="<?= $p->nama?>">
 									<i class="fa fa-download"></i>
 								</a>
                                 <a href="<?= site_url("pengumuman/ubah/$p->id_pengumuman") ?>" class="btn btn-warning btn-sm">

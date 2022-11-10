@@ -29,7 +29,7 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">Deskripsi</label>
-                    <textarea class="form-control"  rows="30" cols="120"><?php echo $pengumuman->deskripsi; ?></textarea>
+                    <textarea class="form-control"  rows="30" cols="120" name="deskripsi"><?php echo $pengumuman->deskripsi; ?></textarea>
                 </div>
 				<div class="form-group">
 					<label class="form-label">Tanggal</label>

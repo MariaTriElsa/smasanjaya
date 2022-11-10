@@ -32,7 +32,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-sm-12 col-md-12 col-lg-9 mb-3">
-								<input class="form-control" value="<?= $aboutus->logo?>" type="file" id="formFile" name="foto">
+								<input class="form-control" value="<?= $aboutus->logo?>" type="file" id="formFile" name="logo">
 							</div>
 							<div class="col-sm-12 col-md-12 col-lg-3">
 								<img src="<?php echo base_url();?>upload/<?php echo $aboutus->logo?>"  style="max-width:100px;">
@@ -42,24 +42,24 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">Visi</label>
-                    <textarea class="form-control"  rows="30" cols="120"><?php echo $aboutus->visi; ?></textarea>
+                    <textarea class="form-control"  rows="30" cols="120" name="visi"><?php echo $aboutus->visi; ?></textarea>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Misi</label>
-                    <textarea class="form-control"  rows="30" cols="120"><?php echo $aboutus->misi; ?></textarea>
+                    <textarea class="form-control"  rows="30" cols="120" name="misi"><?php echo $aboutus->misi; ?></textarea>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Sejarah</label>
-                    <textarea class="form-control"  rows="30" cols="120"><?php echo $aboutus->sejarah; ?></textarea>
+                    <textarea class="form-control"  rows="30" cols="120" name="sejarah"><?php echo $aboutus->sejarah; ?></textarea>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Alamat</label>
-                    <textarea class="form-control"  rows="30" cols="120"><?php echo $aboutus->alamat; ?></textarea>
+                    <textarea class="form-control"  rows="30" cols="120" name="alamat"><?php echo $aboutus->alamat; ?></textarea>
                 </div>
                 <input type="hidden" name="id_aboutus" value="<?= $aboutus->id ?>">
                 <div class="form-group">
                     <label class="form-label">Kontak</label>
-                    <textarea class="form-control"  rows="30" cols="120"><?php echo $aboutus->kontak; ?></textarea>
+                    <textarea class="form-control"  rows="30" cols="120" name="kontak"><?php echo $aboutus->kontak; ?></textarea>
                 </div>
                 <input type="hidden" name="id" value="<?= $aboutus->id?>">
             </form>

@@ -29,14 +29,14 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">Deskripsi</label>
-                    <textarea class="form-control"  rows="30" cols="120"><?php echo $berita->deskripsi_berita; ?></textarea>
+                    <textarea class="form-control"  rows="30" cols="120" name="deskripsi_berita"><?php echo $berita->deskripsi_berita; ?></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Gambar</label>
 					<div class="container">
 						<div class="row">
 							<div class="col-sm-12 col-md-12 col-lg-9 mb-3">
-								<input class="form-control" value="<?= $berita->gambar_berita?>" type="file" id="formFile" name="foto">
+								<input class="form-control"  type="file" id="formFile" name="gambar_berita">
 							</div>
 							<div class="col-sm-12 col-md-12 col-lg-3">
 								<img src="<?php echo base_url();?>upload/<?php echo $berita->gambar_berita?>"  style="max-width:100px;">
@@ -46,7 +46,7 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">Tanggal</label>
-                    <input require type="date" class="form-control" value="<?= date('Y-m-d')?> name="tanggal" placeholder="Tanggal">
+                    <input require type="date" class="form-control" value="<?= date('Y-m-d')?>" name="tanggal" placeholder="Tanggal">
                 </div>
                 <input type="hidden" name="id_berita" value="<?= $berita->id_berita?>">
             </form>

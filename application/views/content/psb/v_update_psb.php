@@ -29,11 +29,20 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">Deskripsi</label>
-                    <textarea class="form-control"  rows="30" cols="120"><?php echo $psb->deskripsi_psb; ?></textarea>
+                    <textarea class="form-control"  rows="30" cols="120" name="deskripsi_psb"><?php echo $psb->deskripsi_psb; ?></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Gambar</label>
-                    <input class="form-control" value="<?= $psb->gambar_psb?>" type="file" id="formFile" name="gambar_psb">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12 col-md-12 col-lg-9 mb-3">
+								<input class="form-control"  type="file" id="formFile" name="gambar_psb">
+							</div>
+							<div class="col-sm-12 col-md-12 col-lg-3">
+								<img src="<?php echo base_url();?>upload/<?php echo $psb->gambar_psb?>"  style="max-width:100px;">
+							</div>
+						</div>
+					</div>
                 </div>
                 <input type="hidden" name="id_psb" value="<?= $psb->id_psb ?>">
             </form>

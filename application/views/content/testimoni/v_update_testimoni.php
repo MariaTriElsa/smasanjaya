@@ -33,14 +33,14 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">Testimoni</label>
-                    <textarea class="form-control"  rows="30" cols="120"><?php echo $testimoni->testimoni; ?></textarea>
+                    <textarea class="form-control"  rows="30" cols="120" name="testimoni"><?php echo $testimoni->testimoni; ?></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Foto</label>
 					<div class="container">
 						<div class="row">
 							<div class="col-sm-12 col-md-12 col-lg-9 mb-3">
-								<input class="form-control" value="<?= $testimoni->gambar?>" type="file" id="formFile" name="foto">
+								<input class="form-control" value="<?= $testimoni->gambar?>" type="file" id="formFile" name="gambar">
 							</div>
 							<div class="col-sm-12 col-md-12 col-lg-3">
 								<img src="<?php echo base_url();?>upload/<?php echo $testimoni->gambar?>"  style="max-width:100px;">

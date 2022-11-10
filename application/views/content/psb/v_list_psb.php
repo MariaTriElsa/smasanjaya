@@ -64,7 +64,6 @@
                             <td><?= $p->tahun?></td>
                             <td><?= $p->deskripsi_psb?></td>
                             <td><img src="<?php echo base_url();?>upload/<?php echo $p->gambar_psb?>"  style="width:250px;"></td>
-                    
                             <td>
                                 <a href="<?= site_url("psb/ubah/$p->id_psb") ?>" class="btn btn-warning btn-sm">
                                     <i class="fa fa-pencil"></i>

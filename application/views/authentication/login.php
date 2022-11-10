@@ -1,7 +1,5 @@
 <div class="login-box">
 	<div class="login-box-body">
-
-		<img src="logosma.jpeg" alt="logo">
 	<h4 class="text-center">SMA SANJAYA</h4> <br>
 		<p class="login-box-msg text-bold"> Masuk Dengan Email & Password Anda</p>
 		<form method="post" action="<?php echo base_url('auth/login'); ?>" role="login">

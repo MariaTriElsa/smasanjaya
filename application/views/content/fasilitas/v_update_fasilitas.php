@@ -29,14 +29,14 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">Deskripsi</label>
-                    <textarea class="form-control"  rows="30" cols="120"><?php echo $fasilitas->deskripsi_fasilitas; ?></textarea>
+                    <textarea class="form-control"  rows="30" cols="120" name="deskripsi_fasilitas"><?php echo $fasilitas->deskripsi_fasilitas; ?></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Gambar</label>
 					<div class="container">
 						<div class="row">
 							<div class="col-sm-12 col-md-12 col-lg-9 mb-3">
-								<input class="form-control" value="<?= $fasilitas->gambar_fasilitas?>" type="file" id="formFile" name="foto">
+								<input class="form-control"  type="file" id="formFile" name="gambar_fasilitas">
 							</div>
 							<div class="col-sm-12 col-md-12 col-lg-3">
 								<img src="<?php echo base_url();?>upload/<?php echo $fasilitas->gambar_fasilitas?>"  style="max-width:100px;">
