@@ -36,7 +36,9 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-sm-12 col-md-12 col-lg-9 mb-3">
+
 								<input class="form-control"  type="file" id="formFile" name="gambar_berita">
+								<input class="form-control" value="<?= $berita->gambar_berita?>" type="file" id="formFile" name="gambar_berita">
 							</div>
 							<div class="col-sm-12 col-md-12 col-lg-3">
 								<img src="<?php echo base_url();?>upload/<?php echo $berita->gambar_berita?>"  style="max-width:100px;">
