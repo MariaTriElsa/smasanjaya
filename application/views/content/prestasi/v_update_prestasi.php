@@ -30,7 +30,7 @@
                 <div class="form-group">
                     <label class="form-label">Deskripsi</label>
                     <textarea class="form-control"  rows="30" cols="120" name="deskripsi"><?php echo $prestasi->deskripsi; ?></textarea>
-                </div>
+                </div>git
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Gambar</label>
 					<div class="container">
