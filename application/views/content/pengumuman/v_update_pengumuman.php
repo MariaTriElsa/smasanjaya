@@ -38,7 +38,7 @@
 				</div>
 				<div class="mb-3">
 					<label for="formFile" class="form-label">File</label>
-					<input class="form-control" type="file" id="formFile" name="file" placeholder="File">
+					<input class="form-control" type="file" id="formFile" name="file" placeholder="File" required>
 				</div>
                 <input type="hidden" name="id_pengumuman" value="<?= $pengumuman->id_pengumuman?>">
             </form>

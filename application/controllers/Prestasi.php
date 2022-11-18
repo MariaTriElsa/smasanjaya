@@ -76,7 +76,7 @@ class Prestasi extends MY_Controller
             $config['allowed_types']        = 'gif|jpg|png|jpeg';
             $this ->load->library('upload',$config);
             if(!$this->upload->do_upload('gambar')){
-                echo "Upload Gagal"; die();
+				$gambar= $_POST['gambar'];
             }else{
                 $gambar=$this->upload->data('file_name');
             }

@@ -85,7 +85,7 @@ class AboutUs extends MY_Controller
             $config['allowed_types']        = 'gif|jpg|png|jpeg';
             $this ->load->library('upload',$config);
             if(!$this->upload->do_upload('logo')){
-                echo "Upload Gagal"; die();
+				$logo= $_POST['logo'];
             }else{
                 $logo=$this->upload->data('file_name');
             }
@@ -103,9 +103,7 @@ class AboutUs extends MY_Controller
             'sejarah'=>$sejarah,
             'alamat'=>$alamat,
             'kontak'=>$kontak
-        ); 
-        echo var_dump($data); 
-        echo var_dump($id); 
+        );
         $this->ModelAboutUs->update($id, $data); 
         redirect('aboutus'); 
     } 
