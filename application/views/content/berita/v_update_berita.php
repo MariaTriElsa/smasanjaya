@@ -31,6 +31,7 @@
                     <label class="form-label">Deskripsi</label>
                     <textarea class="form-control"  rows="30" cols="120" name="deskripsi_berita"><?php echo $berita->deskripsi_berita; ?></textarea>
                 </div>
+                
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Gambar</label>
 					<div class="container">

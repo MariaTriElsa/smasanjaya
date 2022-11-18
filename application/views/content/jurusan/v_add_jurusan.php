@@ -25,20 +25,20 @@
             <form id="form-tambah-jurusan" method="post" action="<?= site_url('jurusan/insert') ?>" enctype="multipart/form-data">
                 <div class="form-group">
                     <label class="form-label">Nama Jurusan</label>
-                    <input require type="text" class="form-control" name="nama_jurusan">
+                    <input  type="text" class="form-control" name="nama_jurusan" required>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Deskripsi</label>
-                    <textarea require type="" class="form-control" name="deskripsi_jurusan"></textarea>
+                    <textarea type="" class="form-control" name="deskripsi_jurusan" required></textarea>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Keunggulan</label>
-                    <textarea require type="" class="form-control" name="keunggulan_jurusan"></textarea>
+                    <textarea  type="" class="form-control" name="keunggulan_jurusan" required></textarea>
                 </div>
             </form>
         </div>
         <div class="card-footer">
-            <button type="button" id="btn-save-jurusan" class="btn btn-success btn-sm">
+            <button type="submit" id="btn-save-jurusan" class="btn btn-success btn-sm">
                 <i class="fa fa-save"></i> Simpan
             </button>
             <a href="<?= site_url('jurusan') ?>" class="btn btn-primary btn-sm">
@@ -48,9 +48,7 @@
     </div>
 </div>
 </body>
-
 </html>
-
 <script>
     $(function (){
         $("#btn-save-jurusan").on("click", function() {

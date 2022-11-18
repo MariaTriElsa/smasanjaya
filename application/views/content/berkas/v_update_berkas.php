@@ -31,6 +31,7 @@
                     <label class="form-label">Kategori</label>
                     <input require type="text" value="<?= $berkas->kategori?>" class="form-control" name="kategori" placeholder="Kategori">
                 </div>
+
                 <div class="mb-3">
                     <label for="formFile" class="form-label">File</label>
                     <input class="form-control" value="<?= $berkas->file_berkas?>" type="file" id="formFile" name="file_berkas">

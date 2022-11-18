@@ -29,7 +29,11 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">Peran</label>
-                    <input require type="text" class="form-control" name="peran">
+                    <select class="form-select" aria-label="Default select example" name="peran">
+                    <option value="Siswa">Siswa</option>
+                    <option value="Siswi">Siswi</option>
+                    <option value="Lainnya">Lainnya</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Testimoni</label>

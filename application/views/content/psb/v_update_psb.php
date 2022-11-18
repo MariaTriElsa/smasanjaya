@@ -36,7 +36,8 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-sm-12 col-md-12 col-lg-9 mb-3">
-								<input class="form-control"  type="file" id="formFile" name="gambar_psb">
+								<input class="form-control" value="<?= $psb->gambar_psb?>" type="file" id="formFile" name="gambar_psb">
+								<input value="<?= $psb->gambar_psb?>" type="hidden" id="formFile" name="gambar_psb">
 							</div>
 							<div class="col-sm-12 col-md-12 col-lg-3">
 								<img src="<?php echo base_url();?>upload/<?php echo $psb->gambar_psb?>"  style="max-width:100px;">

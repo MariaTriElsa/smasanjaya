@@ -36,14 +36,16 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-sm-12 col-md-12 col-lg-9 mb-3">
-								<input class="form-control" value="<?= $ekstrakurikuler->gambar?>" type="file" id="formFile" name="gambar" required>
+								<input class="form-control" value="<?= $ekstrakurikuler->gambar?>" type="file" id="formFile" name="gambar">
+								<input value="<?= $ekstrakurikuler->gambar?>" type="hidden" id="formFile" name="gambar">
 							</div>
 							<div class="col-sm-12 col-md-12 col-lg-3">
 								<img src="<?php echo base_url();?>upload/<?php echo $ekstrakurikuler->gambar?>"  style="max-width:100px;">
 							</div>
 						</div>
-					</div>               
-                 </div>
+					</div>
+                </div>
+                 
                 <input type="hidden" name="id_ekstrakurikuler" value="<?= $ekstrakurikuler->id_ekstrakurikuler ?>">
             </form>
         </div>

@@ -29,7 +29,11 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">Peran</label>
-                    <input require type="text" value="<?= $testimoni->peran?>" class="form-control" name="peran">
+                    <select class="form-select" aria-label="Default select example" name="peran">
+                    <option value="Siswa">Siswa</option>
+                    <option value="Siswi">Siswi</option>
+                    <option value="Lainnya">Lainnya</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Testimoni</label>
@@ -41,7 +45,8 @@
 						<div class="row">
 							<div class="col-sm-12 col-md-12 col-lg-9 mb-3">
 								<input class="form-control" value="<?= $testimoni->gambar?>" type="file" id="formFile" name="gambar" required>
-							</div>
+                                <input value="<?= $testimoni->gambar?>" type="hidden" id="formFile" name="gambar">
+                            </div>
 							<div class="col-sm-12 col-md-12 col-lg-3">
 								<img src="<?php echo base_url();?>upload/<?php echo $testimoni->gambar?>"  style="max-width:100px;">
 							</div>
@@ -52,7 +57,7 @@
             </form>
         </div>
         <div class="card-footer">
-            <button type="button" id="btn-update-testimoni" class="btn btn-success btn-sm">
+            <button type="submit" id="btn-update-testimoni" class="btn btn-success btn-sm">
                 <i class="fa fa-save"></i> Simpan
             </button>
             <a href="<?= site_url('testimoni') ?>" class="btn btn-primary btn-sm">

@@ -37,6 +37,7 @@
 						<div class="row">
 							<div class="col-sm-12 col-md-12 col-lg-9 mb-3">
 								<input class="form-control" value="<?= $organisasi->gambar?>" type="file" id="formFile" name="gambar" required>
+                                <input value="<?= $organisasi->gambar?>" type="hidden" id="formFile" name="gambar">
 							</div>
 							<div class="col-sm-12 col-md-12 col-lg-3">
 								<img src="<?php echo base_url();?>upload/<?php echo $organisasi->gambar?>"  style="max-width:100px;">

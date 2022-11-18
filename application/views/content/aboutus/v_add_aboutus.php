@@ -25,39 +25,39 @@
             <form id="form-tambah-aboutus" method="post" action="<?= site_url('aboutus/insert') ?>" enctype="multipart/form-data">
                 <div class="form-group">
                     <label class="form-label">Nama</label>
-                    <input require type="text" class="form-control" name="nama" placeholder="Nama">
+                    <input type="text" class="form-control" name="nama" placeholder="Nama" required >
                 </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Logo</label>
-                    <input class="form-control" type="file" id="formFile" name="logo">
+                    <input  class="form-control" type="file" id="formFile" name="logo" required>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Visi</label>
-                    <textarea  required type="" class="form-control" name="visi" placeholder="Visi"></textarea>
+                    <textarea  type="" class="form-control" name="visi" placeholder="Visi" required ></textarea>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Misi</label>
-                    <textarea required type="" class="form-control" name="misi" placeholder="Misi"></textarea>
+                    <textarea  type="" class="form-control" name="misi" placeholder="Misi" required></textarea>
                 </div>
                 
                 <div class="form-group">
                     <label class="form-label">Sejarah</label>
-                    <textarea id="sejarah" class="form-control" name="sejarah" placeholder="Sejarah"></textarea>          
+                    <textarea  id="sejarah" class="form-control" name="sejarah" placeholder="Sejarah" required></textarea>          
                 </div>  
                 <div class="form-group">
                     <label class="form-label">Alamat</label>
-                    <textarea required type="" class="form-control" name="alamat" placeholder="Alamat"></textarea>
+                    <textarea  type="" class="form-control" name="alamat" placeholder="Alamat" required></textarea>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Kontak</label>
-                    <textarea require type="" class="form-control" name="kontak" placeholder="Kontak"></textarea>
+                    <textarea type="" class="form-control" name="kontak" placeholder="Kontak" required></textarea>
                 </div>
               
                 </div>
             </form>
         </div>
         <div class="card-footer">
-            <button type="button" id="btn-save-aboutus" class="btn btn-success btn-sm">
+            <button type="submit" id="btn-save-aboutus" class="btn btn-success btn-sm">
                 <i class="fa fa-save"></i> Simpan
             </button>
             <a href="<?= site_url('aboutus') ?>" class="btn btn-primary btn-sm">

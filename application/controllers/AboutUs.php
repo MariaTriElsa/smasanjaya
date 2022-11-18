@@ -108,37 +108,7 @@ class AboutUs extends MY_Controller
         redirect('aboutus'); 
     } 
  
-    // public function update($logo, $latestImgUrl)
-    // {
-    //     if ($latestImgUrl == null) {
-    //         $data = [
-    //             'logo' => $logo,
-    //             'nama' => $this->input->post('nama'),
-    //             'visi' => $this->input->post('visi'),
-    //             'misi' => $this->input->post('misi'),
-    //             'sejarah' => $this->input->post('sejarah'),
-    //             'alamat' => $this->input->post('alamat'),
-    //             'kontak' => $this->input->post('kontak')
-    //         ];
-
-    //         $this->db->where('logo', $logo);
-    //         $this->db->update('aboutus', $data);
-    //     } else {
-    //         $data = [
-    //             'logo' => $latestImgUrl,
-    //             'nama' => $this->input->post('nama'),
-    //             'visi' => $this->input->post('visi'),
-    //             'misi' => $this->input->post('misi'),
-    //             'sejarah' => $this->input->post('sejarah'),
-    //             'alamat' => $this->input->post('alamat'),
-    //             'kontak' => $this->input->post('kontak')
-    //         ];
-          
-    //         unlink(FCPATH . '/content' . $logo);
-    //         $this->db->where('logo', $logo);
-    //         $this->db->update('aboutus', $data);
-    //     }
-    // }
+   
 
     public function delete() 
     { 
