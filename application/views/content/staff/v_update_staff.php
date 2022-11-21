@@ -27,10 +27,14 @@
                     <label class="form-label">Nama</label>
                     <input require type="text" value="<?= $staff->nama_staff?>" class="form-control" name="nama_staff">
                 </div>
-                <div class="form-group">
-                    <label class="form-label">Jabatan</label>
-                    <input require type="text" value="<?= $staff->jabatan?>" class="form-control" name="jabatan">
-                </div>
+				<div class="form-group">
+					<label class="form-label">Jabatan : </label>
+					<select class="form-select" aria-label="Default select example" name="jabatan">
+						<option value="Guru">Guru</option>
+						<option value="Staff TU">Staff TU</option>
+						<option value="Lainnya">Lainnya</option>
+					</select>
+				</div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Foto</label>
 					<div class="container">

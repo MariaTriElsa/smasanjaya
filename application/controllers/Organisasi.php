@@ -107,7 +107,7 @@ class Organisasi extends MY_Controller
 			error_reporting(E_ERROR);
 		}else{
 			$delete = $this->ModelOrganisasi->delete($id);
-			redirect(base_url('/aboutus1'));
+			redirect(base_url('/aboutus'));
 			echo "Gagal";
 		}
         redirect('organisasi'); 

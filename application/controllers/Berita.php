@@ -112,7 +112,7 @@ class Berita extends MY_Controller
 			error_reporting(E_ERROR);
 		}else{
 			$delete = $this->ModelBerita->delete($id);
-			redirect(base_url('/aboutus1'));
+			redirect(base_url('/aboutus'));
 			echo "Gagal";
 		}
         redirect('berita'); 

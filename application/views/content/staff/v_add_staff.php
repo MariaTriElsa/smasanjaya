@@ -27,14 +27,14 @@
                     <label class="form-label">Nama</label>
                     <input required type="text" class="form-control" name="nama_staff" placeholder="Nama">
                 </div>
-                <div class="form-group">
-                    <label class="form-label">Jabatan : </label>
-                    <select name="jabatan" id="">
-                        <option value="Guru">Guru</option>
-                        <option value="Staf TU">Staf TU</option>
-                    </select>
-                    
-                </div>
+				<div class="form-group">
+					<label class="form-label">Jabatan : </label>
+					<select class="form-select" aria-label="Default select example" name="jabatan">
+						<option value="Guru">Guru</option>
+						<option value="Staff TU">Staff TU</option>
+						<option value="Lainnya">Lainnya</option>
+					</select>
+				</div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Foto</label>
                     <input class="form-control" type="file" id="formFile" name="foto">
@@ -60,10 +60,3 @@
 
 </html>
 
-<script>
-    $(function (){
-        $("#btn-save-staff").on("click", function() {
-                $("#form-tambah-staff").submit()
-        })
-    })
-</script>
