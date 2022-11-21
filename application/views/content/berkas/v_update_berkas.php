@@ -34,6 +34,7 @@
                 <div class="mb-3">
                     <label for="formFile" class="form-label">File</label>
                     <input class="form-control" value="<?= $berkas->file_berkas?>" type="file" id="formFile" name="file_berkas">
+					<input value="<?= $berkas->file_berkas?>" type="hidden" id="formFile" name="file_berkas">
                 </div>
                 <input type="hidden" name="id_berkas" value="<?= $berkas->id_berkas ?>">
             </form>

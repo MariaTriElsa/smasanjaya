@@ -25,11 +25,11 @@
             <form id="form-tambah-berita" method="post" action="<?= site_url('berita/insert') ?>" enctype="multipart/form-data">
                 <div class="form-group">
                     <label class="form-label">Judul</label>
-                    <input require type="text" class="form-control" name="nama_berita" placeholder="Judul">
+                    <input required type="text" class="form-control" name="nama_berita" placeholder="Judul">
                 </div>
                 <div class="form-group">
                     <label class="form-label">Deskripsi</label>
-                    <textarea require type="" class="form-control" name="deskripsi_berita" placeholder="Deskripsi"></textarea>
+                    <textarea required type="" class="form-control" name="deskripsi_berita" placeholder="Deskripsi"></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Gambar</label>
@@ -37,15 +37,15 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">Tanggal</label>
-                    <input require type="date" class="form-control" name="tanggal" placeholder="Tanggal">
+                    <input required type="date" class="form-control" name="tanggal" placeholder="Tanggal">
                 </div>
+				<button type="Submit" id="btn-save-berita" class="btn btn-success btn-sm">
+					<i class="fa fa-save"></i> Simpan
+				</button>
                 </div>
             </form>
         </div>
         <div class="card-footer">
-            <button type="button" id="btn-save-berita" class="btn btn-success btn-sm">
-                <i class="fa fa-save"></i> Simpan
-            </button>
             <a href="<?= site_url('berita') ?>" class="btn btn-primary btn-sm">
                 <i class="fa fa-reply"></i> Kembali
             </a>
@@ -53,13 +53,4 @@
     </div>
 </div>
 </body>
-
 </html>
-
-<script>
-    $(function (){
-        $("#btn-save-berita").on("click", function() {
-                $("#form-tambah-berita").submit()
-        })
-    })
-</script>

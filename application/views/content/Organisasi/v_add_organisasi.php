@@ -35,13 +35,13 @@
                     <label for="formFile" class="form-label">Gambar</label>
                     <input class="form-control" type="file" id="formFile" name="gambar">
                 </div>
+				<button type="submit" id="btn-save-organisasi" class="btn btn-success btn-sm">
+					<i class="fa fa-save"></i> Simpan
+				</button>
                 </div>
             </form>
         </div>
         <div class="card-footer">
-            <button type="button" id="btn-save-organisasi" class="btn btn-success btn-sm">
-                <i class="fa fa-save"></i> Simpan
-            </button>
             <a href="<?= site_url('organisasi') ?>" class="btn btn-primary btn-sm">
                 <i class="fa fa-reply"></i> Kembali
             </a>
@@ -49,13 +49,4 @@
     </div>
 </div>
 </body>
-
 </html>
-
-<script>
-    $(function (){
-        $("#btn-save-organisasi").on("click", function() {
-                $("#form-tambah-organisasi").submit()
-        })
-    })
-</script>

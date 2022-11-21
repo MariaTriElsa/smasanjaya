@@ -25,7 +25,7 @@
             <form id="form-tambah-staff" method="post" action="<?= site_url('staff/insert') ?>" enctype="multipart/form-data">
                 <div class="form-group">
                     <label class="form-label">Nama</label>
-                    <input require type="text" class="form-control" name="nama_staff" placeholder="Nama">
+                    <input required type="text" class="form-control" name="nama_staff" placeholder="Nama">
                 </div>
                 <div class="form-group">
                     <label class="form-label">Jabatan : </label>
@@ -41,15 +41,15 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">Deskripsi</label>
-                    <textarea require type="" class="form-control" name="deskripsi" placeholder="Deskripsi"></textarea>
+                    <textarea required type="" class="form-control" name="deskripsi" placeholder="Deskripsi"></textarea>
                 </div>
+				<button type="submit" id="btn-save-staff" class="btn btn-success btn-sm">
+					<i class="fa fa-save"></i> Simpan
+				</button>
                 </div>
             </form>
         </div>
         <div class="card-footer">
-            <button type="button" id="btn-save-staff" class="btn btn-success btn-sm">
-                <i class="fa fa-save"></i> Simpan
-            </button>
             <a href="<?= site_url('staff') ?>" class="btn btn-primary btn-sm">
                 <i class="fa fa-reply"></i> Kembali
             </a>

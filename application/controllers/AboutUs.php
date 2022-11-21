@@ -40,7 +40,7 @@ class AboutUs extends MY_Controller
             $config['allowed_types']        = 'gif|jpg|png|jpeg';
             $this ->load->library('upload',$config);
             if(!$this->upload->do_upload('logo')){
-                echo "Upload Gagal"; die();
+				$logo= $_POST['logo'];
             }else{
                 $logo=$this->upload->data('file_name');
             }

@@ -76,7 +76,7 @@ class Berkas extends MY_Controller
 			$config['allowed_types']        = 'gif|jpg|png|jpeg|doc|docx|pdf';
 			$this ->load->library('upload',$config);
 			if(!$this->upload->do_upload('file_berkas')){
-				echo "Upload Gagal"; die();
+				$berkas= $_POST['file_berkas'];
 			}else{
 				$berkas=$this->upload->data('file_name');
 			}

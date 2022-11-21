@@ -25,26 +25,26 @@
             <form id="form-tambah-pengumuman" method="post" action="<?= site_url('pengumuman/insert') ?>" enctype="multipart/form-data">
                 <div class="form-group">
                     <label class="form-label">Nama</label>
-                    <input require type="text" class="form-control" name="nama" placeholder="Nama">
+                    <input required type="text" class="form-control" name="nama" placeholder="Nama">
                 </div>
                 <div class="form-group">
                     <label class="form-label">Deskripsi</label>
-                    <textarea require type="" class="form-control" name="deskripsi" placeholder="Deskripsi"></textarea>
+                    <textarea required type="" class="form-control" name="deskripsi" placeholder="Deskripsi"></textarea>
                 </div>
                 <div class="form-group">
-                    <input hidden require type="date" class="form-control" value="<?= date('Y-m-d')?>" name="tanggal" placeholder="Tanggal">
+                    <input hidden required type="date" class="form-control" value="<?= date('Y-m-d')?>" name="tanggal" placeholder="Tanggal">
                 </div>
 				<div class="mb-3">
 					<label for="formFile" class="form-label">File</label>
 					<input class="form-control" type="file" id="formFile" name="file" placeholder="File">
 				</div>
+				<button type="submit" id="btn-save-pengumuman" class="btn btn-success btn-sm">
+					<i class="fa fa-save"></i> Simpan
+				</button>
                 </div>
             </form>
         </div>
         <div class="card-footer">
-            <button type="button" id="btn-save-pengumuman" class="btn btn-success btn-sm">
-                <i class="fa fa-save"></i> Simpan
-            </button>
             <a href="<?= site_url('pengumuman') ?>" class="btn btn-primary btn-sm">
                 <i class="fa fa-reply"></i> Kembali
             </a>
@@ -52,13 +52,4 @@
     </div>
 </div>
 </body>
-
 </html>
-
-<script>
-    $(function (){
-        $("#btn-save-pengumuman").on("click", function() {
-                $("#form-tambah-pengumuman").submit()
-        })
-    })
-</script>

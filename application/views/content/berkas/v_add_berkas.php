@@ -25,23 +25,23 @@
             <form id="form-tambah-berkas" method="post" action="<?= site_url('berkas/insert') ?>" enctype="multipart/form-data">
                 <div class="form-group">
                     <label class="form-label">Nama</label>
-                    <input require type="text" class="form-control" name="nama_berkas" placeholder="Nama">
+                    <input required type="text" class="form-control" name="nama_berkas" placeholder="Nama">
                 </div>
                 <div class="form-group">
                     <label class="form-label">Kategori</label>
-                    <input require type="text" class="form-control" name="kategori" placeholder="Kategori">
+                    <input required type="text" class="form-control" name="kategori" placeholder="Kategori">
                 </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">File</label>
                     <input class="form-control" type="file" id="formFile" name="file_berkas" placeholder="File">
                 </div>
+				<button type="submit" id="btn-save-berkas" class="btn btn-success btn-sm">
+					<i class="fa fa-save"></i> Simpan
+				</button>
                 </div>
             </form>
         </div>
         <div class="card-footer">
-            <button type="button" id="btn-save-berkas" class="btn btn-success btn-sm">
-                <i class="fa fa-save"></i> Simpan
-            </button>
             <a href="<?= site_url('berkas') ?>" class="btn btn-primary btn-sm">
                 <i class="fa fa-reply"></i> Kembali
             </a>
@@ -49,13 +49,4 @@
     </div>
 </div>
 </body>
-
 </html>
-
-<script>
-    $(function (){
-        $("#btn-save-berkas").on("click", function() {
-                $("#form-tambah-berkas").submit()
-        })
-    })
-</script>

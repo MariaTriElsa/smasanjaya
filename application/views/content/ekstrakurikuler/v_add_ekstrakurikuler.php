@@ -25,23 +25,23 @@
             <form id="form-tambah-ekstrakurikuler" method="post" action="<?= site_url('ekstrakurikuler/insert') ?>" enctype="multipart/form-data">
                 <div class="form-group">
                     <label class="form-label">Nama</label>
-                    <input require type="text" class="form-control" name="nama">
+                    <input required type="text" class="form-control" name="nama">
                 </div>
                 <div class="form-group">
                     <label class="form-label">Deskripsi</label>
-                    <textarea require type="" class="form-control" name="deskripsi"></textarea>
+                    <textarea required type="" class="form-control" name="deskripsi"></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Gambar</label>
                     <input class="form-control" type="file" id="formFile" name="gambar">
                 </div>
+				<button type="submit" id="btn-save-ekstrakurikuler" class="btn btn-success btn-sm">
+					<i class="fa fa-save"></i> Simpan
+				</button>
                 </div>
             </form>
         </div>
         <div class="card-footer">
-            <button type="button" id="btn-save-ekstrakurikuler" class="btn btn-success btn-sm">
-                <i class="fa fa-save"></i> Simpan
-            </button>
             <a href="<?= site_url('ekstrakurikuler') ?>" class="btn btn-primary btn-sm">
                 <i class="fa fa-reply"></i> Kembali
             </a>
@@ -49,13 +49,4 @@
     </div>
 </div>
 </body>
-
 </html>
-
-<script>
-    $(function (){
-        $("#btn-save-ekstrakurikuler").on("click", function() {
-                $("#form-tambah-ekstrakurikuler").submit()
-        })
-    })
-</script>

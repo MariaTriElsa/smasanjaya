@@ -40,7 +40,7 @@ class Fasilitas extends MY_Controller
             $config['allowed_types']        = 'gif|jpg|png|jpeg';
             $this ->load->library('upload',$config);
             if(!$this->upload->do_upload('gambar_fasilitas')){
-                echo "Upload Gagal"; die();
+				$gambar= $_POST['gambar_fasilitas'];
             }else{
                 $gambar=$this->upload->data('file_name');
             }

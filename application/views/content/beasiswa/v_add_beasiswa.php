@@ -25,19 +25,20 @@
             <form id="form-tambah-beasiswa" method="post" action="<?= site_url('beasiswa/insert') ?>" enctype="multipart/form-data">
                 <div class="form-group">
                     <label class="form-label">Nama</label>
-                    <input require type="text" class="form-control" name="nama">
+                    <input required type="text" class="form-control" name="nama">
                 </div>
     
                 <div class="form-group">
                     <label class="form-label">Deskripsi</label>
-                    <textarea require type="" class="form-control" name="deskripsi"></textarea>
+                    <textarea required type="" class="form-control" name="deskripsi"></textarea>
                 </div>
+				<button type="submit" id="btn-save-beasiswa" class="btn btn-success btn-sm">
+					<i class="fa fa-save"></i> Simpan
+				</button>
             </form>
         </div>
         <div class="card-footer">
-        <button type="button" id="btn-save-beasiswa" class="btn btn-success btn-sm">
-                <i class="fa fa-save"></i> Simpan
-            </button>
+
             <a href="<?= site_url('beasiswa') ?>" class="btn btn-primary btn-sm">
                 <i class="fa fa-reply"></i> Kembali
             </a>
@@ -47,12 +48,3 @@
 </body>
 
 </html>
-
-<script>
-    $(function (){
-        $("#btn-save-beasiswa").on("click", function() {
-           
-                $("#form-tambah-beasiswa").submit()
-        })
-    })
-</script>

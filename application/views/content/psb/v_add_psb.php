@@ -25,23 +25,23 @@
             <form id="form-tambah-psb" method="post" action="<?= site_url('psb/insert') ?>" enctype="multipart/form-data">
                 <div class="form-group">
                     <label class="form-label">Tahun</label>
-                    <input require type="number" class="form-control" name="tahun" placeholder="Tahun">
+                    <input required type="number" class="form-control" name="tahun" placeholder="Tahun">
                 </div>
                 <div class="form-group">
                     <label class="form-label">Deskripsi</label>
-                    <textarea require type="" class="form-control" name="deskripsi_psb" placeholder="Deskripsi"></textarea>
+                    <textarea required type="" class="form-control" name="deskripsi_psb" placeholder="Deskripsi"></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Gambar</label>
                     <input class="form-control" type="file" id="formFile" name="gambar_psb" placeholder="Gambar">
                 </div>
+				<button type="submit" id="btn-save-psb" class="btn btn-success btn-sm">
+					<i class="fa fa-save"></i> Simpan
+				</button>
                 </div>
             </form>
         </div>
         <div class="card-footer">
-            <button type="button" id="btn-save-psb" class="btn btn-success btn-sm">
-                <i class="fa fa-save"></i> Simpan
-            </button>
             <a href="<?= site_url('psb') ?>" class="btn btn-primary btn-sm">
                 <i class="fa fa-reply"></i> Kembali
             </a>
@@ -49,13 +49,4 @@
     </div>
 </div>
 </body>
-
 </html>
-
-<script>
-    $(function (){
-        $("#btn-save-psb").on("click", function() {
-                $("#form-tambah-psb").submit()
-        })
-    })
-</script>
