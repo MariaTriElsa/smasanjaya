@@ -64,14 +64,15 @@
                 </div>
                 <input type="hidden" name="id" value="<?= $aboutus->id?>">
             </form>
+            <button type="submit"  class="btn btn-success btn-sm">
+					<i class="fa fa-save"></i> Simpan
+				</button>
+                <a href="<?= site_url('aboutus') ?>" class="btn btn-primary btn-sm">
+                <i class="fa fa-reply"></i> Kembali
+                </a>
         </div>
         <div class="card-footer">
-            <button type="button" id="btn-update-aboutus" class="btn btn-success btn-sm">
-                <i class="fa fa-save"></i> Simpan
-            </button>
-            <a href="<?= site_url('aboutus') ?>" class="btn btn-primary btn-sm">
-                <i class="fa fa-reply"></i> Kembali
-            </a>
+  
         </div>
     </div>
     </div>

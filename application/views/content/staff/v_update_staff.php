@@ -25,11 +25,11 @@
             <form id="form-update-staff" method="post" action="<?= site_url('staff/update') ?>" enctype="multipart/form-data">
                 <div class="form-group">
                     <label class="form-label">Nama</label>
-                    <input require type="text" value="<?= $staff->nama_staff?>" class="form-control" name="nama_staff">
+                    <input type="text" value="<?= $staff->nama_staff?>" class="form-control" name="nama_staff">
                 </div>
                 <div class="form-group">
                     <label class="form-label">Jabatan : </label>
-                    <select class="form-select" aria-label="Default select example" name="jabatan">
+                    <select class="form-select" aria-label="Default select example" name="jabatan" >
                     <option value="Guru">Guru</option>
                     <option value="Staff TU">Staff TU</option>
                     <option value="Lainnya">Lainnya</option>
